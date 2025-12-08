@@ -18,10 +18,10 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Shape\RichText;
+namespace PhpOffice2\PhpPresentation\Shape\RichText;
 
-use PhpOffice\PhpPresentation\Shape\Hyperlink;
-use PhpOffice\PhpPresentation\Style\Font;
+use PhpOffice2\PhpPresentation\Shape\Hyperlink;
+use PhpOffice2\PhpPresentation\Style\Font;
 
 /**
  * Rich text text element.

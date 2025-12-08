@@ -18,11 +18,11 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Writer\ODPresentation;
+namespace PhpOffice2\PhpPresentation\Writer\ODPresentation;
 
 use PhpOffice\Common\Adapter\Zip\ZipInterface;
-use PhpOffice\PhpPresentation\Shape\Drawing;
-use PhpOffice\PhpPresentation\Slide\Background\Image;
+use PhpOffice2\PhpPresentation\Shape\Drawing;
+use PhpOffice2\PhpPresentation\Slide\Background\Image;
 
 class Pictures extends AbstractDecoratorWriter
 {

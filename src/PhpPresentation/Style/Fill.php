@@ -18,9 +18,10 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Style;
+namespace PhpOffice2\PhpPresentation\Style;
 
-use PhpOffice\PhpPresentation\ComparableInterface;
+use PhpOffice2\
+PhpPresentation\ComparableInterface;
 
 class Fill implements ComparableInterface
 {

@@ -18,7 +18,7 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Shape\Chart\Type;
+namespace PhpOffice2\PhpPresentation\Shape\Chart\Type;
 
 /**
  * \PhpOffice\PhpPresentation\Shape\Chart\Type\Bar.

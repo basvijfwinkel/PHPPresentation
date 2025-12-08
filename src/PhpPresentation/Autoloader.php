@@ -18,7 +18,7 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation;
+namespace PhpOffice2\PhpPresentation;
 
 /**
  * Autoloader.
@@ -26,7 +26,7 @@ namespace PhpOffice\PhpPresentation;
 class Autoloader
 {
     /** @const string */
-    public const NAMESPACE_PREFIX = 'PhpOffice\\PhpPresentation\\';
+    public const NAMESPACE_PREFIX = 'PhpOffice2\\PhpPresentation\\';
 
     /**
      * Register.

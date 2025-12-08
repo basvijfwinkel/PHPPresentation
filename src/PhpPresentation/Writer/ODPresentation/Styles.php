@@ -18,18 +18,18 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Writer\ODPresentation;
+namespace PhpOffice2\PhpPresentation\Writer\ODPresentation;
 
 use PhpOffice\Common\Adapter\Zip\ZipInterface;
 use PhpOffice\Common\Drawing as CommonDrawing;
 use PhpOffice\Common\Text;
 use PhpOffice\Common\XMLWriter;
-use PhpOffice\PhpPresentation\Shape\Group;
-use PhpOffice\PhpPresentation\Shape\RichText;
-use PhpOffice\PhpPresentation\Shape\Table;
-use PhpOffice\PhpPresentation\Slide\Background\Image;
-use PhpOffice\PhpPresentation\Style\Border;
-use PhpOffice\PhpPresentation\Style\Fill;
+use PhpOffice2\PhpPresentation\Shape\Group;
+use PhpOffice2\PhpPresentation\Shape\RichText;
+use PhpOffice2\PhpPresentation\Shape\Table;
+use PhpOffice2\PhpPresentation\Slide\Background\Image;
+use PhpOffice2\PhpPresentation\Style\Border;
+use PhpOffice2\PhpPresentation\Style\Fill;
 
 class Styles extends AbstractDecoratorWriter
 {

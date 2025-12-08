@@ -18,12 +18,12 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation;
+namespace PhpOffice2\PhpPresentation;
 
-use PhpOffice\PhpPresentation\Exception\InvalidClassException;
-use PhpOffice\PhpPresentation\Exception\InvalidFileFormatException;
-use PhpOffice\PhpPresentation\Reader\ReaderInterface;
-use PhpOffice\PhpPresentation\Writer\WriterInterface;
+use PhpOffice2\PhpPresentation\Exception\InvalidClassException;
+use PhpOffice2\PhpPresentation\Exception\InvalidFileFormatException;
+use PhpOffice2\PhpPresentation\Reader\ReaderInterface;
+use PhpOffice2\PhpPresentation\Writer\WriterInterface;
 use ReflectionClass;
 
 /**

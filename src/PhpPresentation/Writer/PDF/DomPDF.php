@@ -18,11 +18,11 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Writer\PDF;
+namespace PhpOffice2\PhpPresentation\Writer\PDF;
 
 use Dompdf\Dompdf as DomPDFLib;
 use Dompdf\Options;
-use PhpOffice\PhpPresentation\Writer\HTML;
+use PhpOffice2\PhpPresentation\Writer\HTML;
 
 class DomPDF extends HTML implements PDFWriterInterface
 {

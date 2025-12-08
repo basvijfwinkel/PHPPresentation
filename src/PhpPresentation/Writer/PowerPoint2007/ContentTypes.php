@@ -18,13 +18,13 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Writer\PowerPoint2007;
+namespace PhpOffice2\PhpPresentation\Writer\PowerPoint2007;
 
 use PhpOffice\Common\Adapter\Zip\ZipInterface;
 use PhpOffice\Common\XMLWriter;
-use PhpOffice\PhpPresentation\Shape\Chart as ShapeChart;
-use PhpOffice\PhpPresentation\Shape\Comment;
-use PhpOffice\PhpPresentation\Shape\Drawing\AbstractDrawingAdapter;
+use PhpOffice2\PhpPresentation\Shape\Chart as ShapeChart;
+use PhpOffice2\PhpPresentation\Shape\Comment;
+use PhpOffice2\PhpPresentation\Shape\Drawing\AbstractDrawingAdapter;
 
 /**
  * \PhpOffice\PhpPresentation\Writer\PowerPoint2007\ContentTypes.

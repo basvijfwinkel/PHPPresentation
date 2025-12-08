@@ -18,15 +18,15 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation;
+namespace PhpOffice2\PhpPresentation;
 
-use PhpOffice\PhpPresentation\Exception\ShapeContainerAlreadyAssignedException;
-use PhpOffice\PhpPresentation\Shape\Group;
-use PhpOffice\PhpPresentation\Shape\Hyperlink;
-use PhpOffice\PhpPresentation\Shape\Placeholder;
-use PhpOffice\PhpPresentation\Style\Border;
-use PhpOffice\PhpPresentation\Style\Fill;
-use PhpOffice\PhpPresentation\Style\Shadow;
+use PhpOffice2\PhpPresentation\Exception\ShapeContainerAlreadyAssignedException;
+use PhpOffice2\PhpPresentation\Shape\Group;
+use PhpOffice2\PhpPresentation\Shape\Hyperlink;
+use PhpOffice2\PhpPresentation\Shape\Placeholder;
+use PhpOffice2\PhpPresentation\Style\Border;
+use PhpOffice2\PhpPresentation\Style\Fill;
+use PhpOffice2\PhpPresentation\Style\Shadow;
 
 /**
  * Abstract shape.

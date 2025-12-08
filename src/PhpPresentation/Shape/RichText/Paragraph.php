@@ -18,12 +18,12 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Shape\RichText;
+namespace PhpOffice2\PhpPresentation\Shape\RichText;
 
-use PhpOffice\PhpPresentation\ComparableInterface;
-use PhpOffice\PhpPresentation\Style\Alignment;
-use PhpOffice\PhpPresentation\Style\Bullet;
-use PhpOffice\PhpPresentation\Style\Font;
+use PhpOffice2\PhpPresentation\ComparableInterface;
+use PhpOffice2\PhpPresentation\Style\Alignment;
+use PhpOffice2\PhpPresentation\Style\Bullet;
+use PhpOffice2\PhpPresentation\Style\Font;
 
 /**
  * \PhpOffice\PhpPresentation\Shape\RichText\Paragraph.

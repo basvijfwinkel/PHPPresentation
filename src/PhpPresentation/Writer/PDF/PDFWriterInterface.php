@@ -18,9 +18,9 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Writer\PDF;
+namespace PhpOffice2\PhpPresentation\Writer\PDF;
 
-use PhpOffice\PhpPresentation\PhpPresentation;
+use PhpOffice2\PhpPresentation\PhpPresentation;
 
 interface PDFWriterInterface
 {

@@ -18,9 +18,9 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Shape\Drawing;
+namespace PhpOffice2\PhpPresentation\Shape\Drawing;
 
-use PhpOffice\PhpPresentation\Exception\UnauthorizedMimetypeException;
+use PhpOffice2\PhpPresentation\Exception\UnauthorizedMimetypeException;
 
 class Base64 extends AbstractDrawingAdapter
 {

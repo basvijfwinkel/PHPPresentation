@@ -18,7 +18,7 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Exception;
+namespace PhpOffice2\PhpPresentation\Exception;
 
 class InvalidClassException extends PhpPresentationException
 {

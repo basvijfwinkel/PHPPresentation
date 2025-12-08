@@ -18,20 +18,20 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Slide;
+namespace PhpOffice2\PhpPresentation\Slide;
 
-use PhpOffice\PhpPresentation\ComparableInterface;
-use PhpOffice\PhpPresentation\GeometryCalculator;
-use PhpOffice\PhpPresentation\PhpPresentation;
-use PhpOffice\PhpPresentation\Shape\AutoShape;
-use PhpOffice\PhpPresentation\Shape\Chart;
-use PhpOffice\PhpPresentation\Shape\Drawing\File;
-use PhpOffice\PhpPresentation\Shape\Group;
-use PhpOffice\PhpPresentation\Shape\Line;
-use PhpOffice\PhpPresentation\Shape\RichText;
-use PhpOffice\PhpPresentation\Shape\Table;
-use PhpOffice\PhpPresentation\ShapeContainerInterface;
-use PhpOffice\PhpPresentation\Traits\ShapeCollection;
+use PhpOffice2\PhpPresentation\ComparableInterface;
+use PhpOffice2\PhpPresentation\GeometryCalculator;
+use PhpOffice2\PhpPresentation\PhpPresentation;
+use PhpOffice2\PhpPresentation\Shape\AutoShape;
+use PhpOffice2\PhpPresentation\Shape\Chart;
+use PhpOffice2\PhpPresentation\Shape\Drawing\File;
+use PhpOffice2\PhpPresentation\Shape\Group;
+use PhpOffice2\PhpPresentation\Shape\Line;
+use PhpOffice2\PhpPresentation\Shape\RichText;
+use PhpOffice2\PhpPresentation\Shape\Table;
+use PhpOffice2\PhpPresentation\ShapeContainerInterface;
+use PhpOffice2\PhpPresentation\Traits\ShapeCollection;
 
 abstract class AbstractSlide implements ComparableInterface, ShapeContainerInterface
 {

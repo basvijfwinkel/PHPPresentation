@@ -18,11 +18,11 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Style;
+namespace PhpOffice2\PhpPresentation\Style;
 
-use PhpOffice\PhpPresentation\ComparableInterface;
-use PhpOffice\PhpPresentation\Exception\InvalidParameterException;
-use PhpOffice\PhpPresentation\Exception\NotAllowedValueException;
+use PhpOffice2\PhpPresentation\ComparableInterface;
+use PhpOffice2\PhpPresentation\Exception\InvalidParameterException;
+use PhpOffice2\PhpPresentation\Exception\NotAllowedValueException;
 
 /**
  * \PhpOffice\PhpPresentation\Style\Font.

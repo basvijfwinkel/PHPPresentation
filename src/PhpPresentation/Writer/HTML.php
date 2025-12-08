@@ -18,20 +18,20 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Writer;
+namespace PhpOffice2\PhpPresentation\Writer;
 
-use PhpOffice\PhpPresentation\DocumentLayout;
-use PhpOffice\PhpPresentation\Exception\InvalidParameterException;
-use PhpOffice\PhpPresentation\HashTable;
-use PhpOffice\PhpPresentation\PhpPresentation;
-use PhpOffice\PhpPresentation\Shape\Drawing;
-use PhpOffice\PhpPresentation\Shape\Media;
-use PhpOffice\PhpPresentation\Shape\RichText;
-use PhpOffice\PhpPresentation\Shape\Table;
-use PhpOffice\PhpPresentation\Slide;
-use PhpOffice\PhpPresentation\Style\Alignment;
-use PhpOffice\PhpPresentation\Style\Font;
-use PhpOffice\PhpPresentation\Style\Shadow;
+use PhpOffice2\PhpPresentation\DocumentLayout;
+use PhpOffice2\PhpPresentation\Exception\InvalidParameterException;
+use PhpOffice2\PhpPresentation\HashTable;
+use PhpOffice2\PhpPresentation\PhpPresentation;
+use PhpOffice2\PhpPresentation\Shape\Drawing;
+use PhpOffice2\PhpPresentation\Shape\Media;
+use PhpOffice2\PhpPresentation\Shape\RichText;
+use PhpOffice2\PhpPresentation\Shape\Table;
+use PhpOffice2\PhpPresentation\Slide;
+use PhpOffice2\PhpPresentation\Style\Alignment;
+use PhpOffice2\PhpPresentation\Style\Font;
+use PhpOffice2\PhpPresentation\Style\Shadow;
 
 /**
  * HTML writer.

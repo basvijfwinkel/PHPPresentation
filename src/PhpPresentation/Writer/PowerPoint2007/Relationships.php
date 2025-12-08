@@ -18,12 +18,12 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Writer\PowerPoint2007;
+namespace PhpOffice2\PhpPresentation\Writer\PowerPoint2007;
 
 use PhpOffice\Common\Adapter\Zip\ZipInterface;
 use PhpOffice\Common\XMLWriter;
-use PhpOffice\PhpPresentation\Shape\Comment;
-use PhpOffice\PhpPresentation\Shape\Comment\Author;
+use PhpOffice2\PhpPresentation\Shape\Comment;
+use PhpOffice2\PhpPresentation\Shape\Comment\Author;
 
 class Relationships extends AbstractDecoratorWriter
 {

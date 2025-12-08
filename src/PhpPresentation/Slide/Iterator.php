@@ -18,10 +18,10 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Slide;
+namespace PhpOffice2\PhpPresentation\Slide;
 
 use IteratorIterator;
-use PhpOffice\PhpPresentation\PhpPresentation;
+use PhpOffice2\PhpPresentation\PhpPresentation;
 use ReturnTypeWillChange;
 
 // @phpstan-ignore-next-line

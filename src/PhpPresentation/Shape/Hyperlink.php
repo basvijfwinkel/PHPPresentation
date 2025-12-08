@@ -18,7 +18,7 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Shape;
+namespace PhpOffice2\PhpPresentation\Shape;
 
 /**
  * Hyperlink element.

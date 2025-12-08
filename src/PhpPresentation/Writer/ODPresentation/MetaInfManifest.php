@@ -18,12 +18,12 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Writer\ODPresentation;
+namespace PhpOffice2\PhpPresentation\Writer\ODPresentation;
 
 use PhpOffice\Common\Adapter\Zip\ZipInterface;
 use PhpOffice\Common\XMLWriter;
-use PhpOffice\PhpPresentation\Shape\Drawing as ShapeDrawing;
-use PhpOffice\PhpPresentation\Slide\Background\Image;
+use PhpOffice2\PhpPresentation\Shape\Drawing as ShapeDrawing;
+use PhpOffice2\PhpPresentation\Slide\Background\Image;
 
 class MetaInfManifest extends AbstractDecoratorWriter
 {

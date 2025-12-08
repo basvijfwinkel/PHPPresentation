@@ -18,10 +18,10 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Shape\Drawing;
+namespace PhpOffice2\PhpPresentation\Shape\Drawing;
 
 use PhpOffice\Common\File as CommonFile;
-use PhpOffice\PhpPresentation\Exception\FileNotFoundException;
+use PhpOffice2\PhpPresentation\Exception\FileNotFoundException;
 
 class File extends AbstractDrawingAdapter
 {

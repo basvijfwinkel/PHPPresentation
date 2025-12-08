@@ -18,13 +18,13 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Shape\Chart;
+namespace PhpOffice2\PhpPresentation\Shape\Chart;
 
-use PhpOffice\PhpPresentation\ComparableInterface;
-use PhpOffice\PhpPresentation\Style\Alignment;
-use PhpOffice\PhpPresentation\Style\Border;
-use PhpOffice\PhpPresentation\Style\Fill;
-use PhpOffice\PhpPresentation\Style\Font;
+use PhpOffice2\PhpPresentation\ComparableInterface;
+use PhpOffice2\PhpPresentation\Style\Alignment;
+use PhpOffice2\PhpPresentation\Style\Border;
+use PhpOffice2\PhpPresentation\Style\Fill;
+use PhpOffice2\PhpPresentation\Style\Font;
 
 /**
  * \PhpOffice\PhpPresentation\Shape\Chart\Legend.

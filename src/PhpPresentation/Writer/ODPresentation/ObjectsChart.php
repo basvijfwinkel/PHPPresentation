@@ -18,29 +18,29 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Writer\ODPresentation;
+namespace PhpOffice2\PhpPresentation\Writer\ODPresentation;
 
 use PhpOffice\Common\Adapter\Zip\ZipInterface;
 use PhpOffice\Common\Drawing as CommonDrawing;
 use PhpOffice\Common\Text;
 use PhpOffice\Common\XMLWriter;
-use PhpOffice\PhpPresentation\Shape\Chart;
-use PhpOffice\PhpPresentation\Shape\Chart\Axis;
-use PhpOffice\PhpPresentation\Shape\Chart\Title;
-use PhpOffice\PhpPresentation\Shape\Chart\Type\AbstractType;
-use PhpOffice\PhpPresentation\Shape\Chart\Type\AbstractTypeBar;
-use PhpOffice\PhpPresentation\Shape\Chart\Type\AbstractTypeLine;
-use PhpOffice\PhpPresentation\Shape\Chart\Type\AbstractTypePie;
-use PhpOffice\PhpPresentation\Shape\Chart\Type\Area;
-use PhpOffice\PhpPresentation\Shape\Chart\Type\Bar;
-use PhpOffice\PhpPresentation\Shape\Chart\Type\Bar3D;
-use PhpOffice\PhpPresentation\Shape\Chart\Type\Doughnut;
-use PhpOffice\PhpPresentation\Shape\Chart\Type\Line;
-use PhpOffice\PhpPresentation\Shape\Chart\Type\Pie3D;
-use PhpOffice\PhpPresentation\Shape\Chart\Type\Radar;
-use PhpOffice\PhpPresentation\Shape\Chart\Type\Scatter;
-use PhpOffice\PhpPresentation\Style\Fill;
-use PhpOffice\PhpPresentation\Style\Outline;
+use PhpOffice2\PhpPresentation\Shape\Chart;
+use PhpOffice2\PhpPresentation\Shape\Chart\Axis;
+use PhpOffice2\PhpPresentation\Shape\Chart\Title;
+use PhpOffice2\PhpPresentation\Shape\Chart\Type\AbstractType;
+use PhpOffice2\PhpPresentation\Shape\Chart\Type\AbstractTypeBar;
+use PhpOffice2\PhpPresentation\Shape\Chart\Type\AbstractTypeLine;
+use PhpOffice2\PhpPresentation\Shape\Chart\Type\AbstractTypePie;
+use PhpOffice2\PhpPresentation\Shape\Chart\Type\Area;
+use PhpOffice2\PhpPresentation\Shape\Chart\Type\Bar;
+use PhpOffice2\PhpPresentation\Shape\Chart\Type\Bar3D;
+use PhpOffice2\PhpPresentation\Shape\Chart\Type\Doughnut;
+use PhpOffice2\PhpPresentation\Shape\Chart\Type\Line;
+use PhpOffice2\PhpPresentation\Shape\Chart\Type\Pie3D;
+use PhpOffice2\PhpPresentation\Shape\Chart\Type\Radar;
+use PhpOffice2\PhpPresentation\Shape\Chart\Type\Scatter;
+use PhpOffice2\PhpPresentation\Style\Fill;
+use PhpOffice2\PhpPresentation\Style\Outline;
 
 class ObjectsChart extends AbstractDecoratorWriter
 {

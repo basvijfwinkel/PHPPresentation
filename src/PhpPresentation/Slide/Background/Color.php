@@ -18,10 +18,10 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Slide\Background;
+namespace PhpOffice2\PhpPresentation\Slide\Background;
 
-use PhpOffice\PhpPresentation\Slide\AbstractBackground;
-use PhpOffice\PhpPresentation\Style\Color as StyleColor;
+use PhpOffice2\PhpPresentation\Slide\AbstractBackground;
+use PhpOffice2\PhpPresentation\Style\Color as StyleColor;
 
 class Color extends AbstractBackground
 {

@@ -18,9 +18,9 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Reader;
+namespace PhpOffice2\PhpPresentation\Reader;
 
-use PhpOffice\PhpPresentation\PhpPresentation;
+use PhpOffice2\PhpPresentation\PhpPresentation;
 
 /**
  * Reader interface.

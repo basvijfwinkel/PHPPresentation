@@ -18,12 +18,12 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation;
+namespace PhpOffice2\PhpPresentation;
 
 use ArrayObject;
-use PhpOffice\PhpPresentation\Exception\OutOfBoundsException;
-use PhpOffice\PhpPresentation\Slide\Iterator;
-use PhpOffice\PhpPresentation\Slide\SlideMaster;
+use PhpOffice2\PhpPresentation\Exception\OutOfBoundsException;
+use PhpOffice2\PhpPresentation\Slide\Iterator;
+use PhpOffice2\PhpPresentation\Slide\SlideMaster;
 
 /**
  * PhpPresentation.

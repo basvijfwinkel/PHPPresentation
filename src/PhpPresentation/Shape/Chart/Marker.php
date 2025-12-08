@@ -18,10 +18,10 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Shape\Chart;
+namespace PhpOffice2\PhpPresentation\Shape\Chart;
 
-use PhpOffice\PhpPresentation\Style\Border;
-use PhpOffice\PhpPresentation\Style\Fill;
+use PhpOffice2\PhpPresentation\Style\Border;
+use PhpOffice2\PhpPresentation\Style\Fill;
 
 class Marker
 {

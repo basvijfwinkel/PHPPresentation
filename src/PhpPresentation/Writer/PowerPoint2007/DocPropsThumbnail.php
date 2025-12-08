@@ -18,7 +18,7 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Writer\PowerPoint2007;
+namespace PhpOffice2\PhpPresentation\Writer\PowerPoint2007;
 
 use PhpOffice\Common\Adapter\Zip\ZipInterface;
 

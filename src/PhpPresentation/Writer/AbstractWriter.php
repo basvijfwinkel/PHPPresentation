@@ -18,16 +18,16 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Writer;
+namespace PhpOffice2\PhpPresentation\Writer;
 
 use PhpOffice\Common\Adapter\Zip\ZipInterface;
-use PhpOffice\PhpPresentation\AbstractShape;
-use PhpOffice\PhpPresentation\HashTable;
-use PhpOffice\PhpPresentation\PhpPresentation;
-use PhpOffice\PhpPresentation\Shape\Chart;
-use PhpOffice\PhpPresentation\Shape\Drawing\AbstractDrawingAdapter;
-use PhpOffice\PhpPresentation\Shape\Group;
-use PhpOffice\PhpPresentation\Writer\PDF\PDFWriterInterface;
+use PhpOffice2\PhpPresentation\AbstractShape;
+use PhpOffice2\PhpPresentation\HashTable;
+use PhpOffice2\PhpPresentation\PhpPresentation;
+use PhpOffice2\PhpPresentation\Shape\Chart;
+use PhpOffice2\PhpPresentation\Shape\Drawing\AbstractDrawingAdapter;
+use PhpOffice2\PhpPresentation\Shape\Group;
+use PhpOffice2\PhpPresentation\Writer\PDF\PDFWriterInterface;
 
 abstract class AbstractWriter
 {

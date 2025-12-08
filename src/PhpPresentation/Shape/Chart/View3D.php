@@ -18,9 +18,9 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Shape\Chart;
+namespace PhpOffice2\PhpPresentation\Shape\Chart;
 
-use PhpOffice\PhpPresentation\ComparableInterface;
+use PhpOffice2\PhpPresentation\ComparableInterface;
 
 /**
  * \PhpOffice\PhpPresentation\Shape\Chart\View3D.

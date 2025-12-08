@@ -18,11 +18,11 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Writer\PowerPoint2007;
+namespace PhpOffice2\PhpPresentation\Writer\PowerPoint2007;
 
 use PhpOffice\Common\Adapter\Zip\ZipInterface;
 use PhpOffice\Common\XMLWriter;
-use PhpOffice\PhpPresentation\DocumentLayout;
+use PhpOffice2\PhpPresentation\DocumentLayout;
 
 class PptPresentation extends AbstractDecoratorWriter
 {

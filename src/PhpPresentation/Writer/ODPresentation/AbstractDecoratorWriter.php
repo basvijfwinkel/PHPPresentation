@@ -18,9 +18,9 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Writer\ODPresentation;
+namespace PhpOffice2\PhpPresentation\Writer\ODPresentation;
 
-use PhpOffice\PhpPresentation\Shape\Chart;
+use PhpOffice2\PhpPresentation\Shape\Chart;
 
 abstract class AbstractDecoratorWriter extends \PhpOffice\PhpPresentation\Writer\AbstractDecoratorWriter
 {

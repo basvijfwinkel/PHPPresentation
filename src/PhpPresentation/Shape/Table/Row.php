@@ -18,11 +18,11 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Shape\Table;
+namespace PhpOffice2\PhpPresentation\Shape\Table;
 
-use PhpOffice\PhpPresentation\ComparableInterface;
-use PhpOffice\PhpPresentation\Exception\OutOfBoundsException;
-use PhpOffice\PhpPresentation\Style\Fill;
+use PhpOffice2\PhpPresentation\ComparableInterface;
+use PhpOffice2\PhpPresentation\Exception\OutOfBoundsException;
+use PhpOffice2\PhpPresentation\Style\Fill;
 
 /**
  * Table row.

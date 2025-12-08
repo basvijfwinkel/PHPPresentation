@@ -18,15 +18,15 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Writer\PowerPoint2007;
+namespace PhpOffice2\PhpPresentation\Writer\PowerPoint2007;
 
 use PhpOffice\Common\Adapter\Zip\ZipInterface;
 use PhpOffice\Common\Drawing as CommonDrawing;
 use PhpOffice\Common\XMLWriter;
-use PhpOffice\PhpPresentation\Slide;
-use PhpOffice\PhpPresentation\Slide\Background\Image;
-use PhpOffice\PhpPresentation\Slide\SlideLayout;
-use PhpOffice\PhpPresentation\Style\ColorMap;
+use PhpOffice2\PhpPresentation\Slide;
+use PhpOffice2\PhpPresentation\Slide\Background\Image;
+use PhpOffice2\PhpPresentation\Slide\SlideLayout;
+use PhpOffice2\PhpPresentation\Style\ColorMap;
 
 class PptSlideLayouts extends AbstractSlide
 {

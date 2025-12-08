@@ -18,14 +18,14 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Writer\PowerPoint2007;
+namespace PhpOffice2\PhpPresentation\Writer\PowerPoint2007;
 
 use PhpOffice\Common\Drawing as CommonDrawing;
 use PhpOffice\Common\XMLWriter;
-use PhpOffice\PhpPresentation\Style\Border;
-use PhpOffice\PhpPresentation\Style\Color;
-use PhpOffice\PhpPresentation\Style\Fill;
-use PhpOffice\PhpPresentation\Style\Outline;
+use PhpOffice2\PhpPresentation\Style\Border;
+use PhpOffice2\PhpPresentation\Style\Color;
+use PhpOffice2\PhpPresentation\Style\Fill;
+use PhpOffice2\PhpPresentation\Style\Outline;
 
 abstract class AbstractDecoratorWriter extends \PhpOffice\PhpPresentation\Writer\AbstractDecoratorWriter
 {

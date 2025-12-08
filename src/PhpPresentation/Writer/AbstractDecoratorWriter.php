@@ -18,11 +18,11 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Writer;
+namespace PhpOffice2\PhpPresentation\Writer;
 
 use PhpOffice\Common\Adapter\Zip\ZipInterface;
-use PhpOffice\PhpPresentation\HashTable;
-use PhpOffice\PhpPresentation\PhpPresentation;
+use PhpOffice2\PhpPresentation\HashTable;
+use PhpOffice2\PhpPresentation\PhpPresentation;
 
 abstract class AbstractDecoratorWriter
 {

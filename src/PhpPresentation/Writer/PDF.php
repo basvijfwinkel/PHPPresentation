@@ -18,12 +18,12 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Writer;
+namespace PhpOffice2\PhpPresentation\Writer;
 
-use PhpOffice\PhpPresentation\Exception\InvalidParameterException;
-use PhpOffice\PhpPresentation\Exception\WriterPDFAdapterNotDefinedException;
-use PhpOffice\PhpPresentation\HashTable;
-use PhpOffice\PhpPresentation\PhpPresentation;
+use PhpOffice2\PhpPresentation\Exception\InvalidParameterException;
+use PhpOffice2\PhpPresentation\Exception\WriterPDFAdapterNotDefinedException;
+use PhpOffice2\PhpPresentation\HashTable;
+use PhpOffice2\PhpPresentation\PhpPresentation;
 
 class PDF extends HTML implements WriterInterface
 {

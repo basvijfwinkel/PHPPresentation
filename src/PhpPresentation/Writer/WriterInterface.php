@@ -18,7 +18,7 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Writer;
+namespace PhpOffice2\PhpPresentation\Writer;
 
 /**
  * Writer interface.

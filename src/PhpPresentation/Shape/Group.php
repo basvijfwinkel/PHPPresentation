@@ -18,11 +18,11 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Shape;
+namespace PhpOffice2\PhpPresentation\Shape;
 
-use PhpOffice\PhpPresentation\AbstractShape;
-use PhpOffice\PhpPresentation\ShapeContainerInterface;
-use PhpOffice\PhpPresentation\Traits\ShapeCollection;
+use PhpOffice2\PhpPresentation\AbstractShape;
+use PhpOffice2\PhpPresentation\ShapeContainerInterface;
+use PhpOffice2\PhpPresentation\Traits\ShapeCollection;
 
 class Group extends AbstractShape implements ShapeContainerInterface
 {

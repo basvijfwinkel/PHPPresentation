@@ -18,33 +18,33 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Writer\PowerPoint2007;
+namespace PhpOffice2\PhpPresentation\Writer\PowerPoint2007;
 
 use PhpOffice\Common\Adapter\Zip\ZipInterface;
 use PhpOffice\Common\Drawing as CommonDrawing;
 use PhpOffice\Common\XMLWriter;
-use PhpOffice\PhpPresentation\Exception\FileRemoveException;
-use PhpOffice\PhpPresentation\Exception\UndefinedChartTypeException;
-use PhpOffice\PhpPresentation\PhpPresentation;
-use PhpOffice\PhpPresentation\Shape\Chart;
-use PhpOffice\PhpPresentation\Shape\Chart\Gridlines;
-use PhpOffice\PhpPresentation\Shape\Chart\Legend;
-use PhpOffice\PhpPresentation\Shape\Chart\PlotArea;
-use PhpOffice\PhpPresentation\Shape\Chart\Title;
-use PhpOffice\PhpPresentation\Shape\Chart\Type\Area;
-use PhpOffice\PhpPresentation\Shape\Chart\Type\Bar;
-use PhpOffice\PhpPresentation\Shape\Chart\Type\Bar3D;
-use PhpOffice\PhpPresentation\Shape\Chart\Type\Doughnut;
-use PhpOffice\PhpPresentation\Shape\Chart\Type\Line;
-use PhpOffice\PhpPresentation\Shape\Chart\Type\Pie;
-use PhpOffice\PhpPresentation\Shape\Chart\Type\Pie3D;
-use PhpOffice\PhpPresentation\Shape\Chart\Type\Radar;
-use PhpOffice\PhpPresentation\Shape\Chart\Type\Scatter;
-use PhpOffice\PhpPresentation\Style\Border;
-use PhpOffice\PhpPresentation\Style\Fill;
-use PhpOffice\PhpSpreadsheet\Cell\Coordinate;
-use PhpOffice\PhpSpreadsheet\IOFactory;
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use PhpOffice2\PhpPresentation\Exception\FileRemoveException;
+use PhpOffice2\PhpPresentation\Exception\UndefinedChartTypeException;
+use PhpOffice2\PhpPresentation\PhpPresentation;
+use PhpOffice2\PhpPresentation\Shape\Chart;
+use PhpOffice2\PhpPresentation\Shape\Chart\Gridlines;
+use PhpOffice2\PhpPresentation\Shape\Chart\Legend;
+use PhpOffice2\PhpPresentation\Shape\Chart\PlotArea;
+use PhpOffice2\PhpPresentation\Shape\Chart\Title;
+use PhpOffice2\PhpPresentation\Shape\Chart\Type\Area;
+use PhpOffice2\PhpPresentation\Shape\Chart\Type\Bar;
+use PhpOffice2\PhpPresentation\Shape\Chart\Type\Bar3D;
+use PhpOffice2\PhpPresentation\Shape\Chart\Type\Doughnut;
+use PhpOffice2\PhpPresentation\Shape\Chart\Type\Line;
+use PhpOffice2\PhpPresentation\Shape\Chart\Type\Pie;
+use PhpOffice2\PhpPresentation\Shape\Chart\Type\Pie3D;
+use PhpOffice2\PhpPresentation\Shape\Chart\Type\Radar;
+use PhpOffice2\PhpPresentation\Shape\Chart\Type\Scatter;
+use PhpOffice2\PhpPresentation\Style\Border;
+use PhpOffice2\PhpPresentation\Style\Fill;
+use PhpOffice2\PhpSpreadsheet\Cell\Coordinate;
+use PhpOffice2\PhpSpreadsheet\IOFactory;
+use PhpOffice2\PhpSpreadsheet\Spreadsheet;
 
 class PptCharts extends AbstractDecoratorWriter
 {

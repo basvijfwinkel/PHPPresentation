@@ -18,15 +18,15 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Writer;
+namespace PhpOffice2\PhpPresentation\Writer;
 
 use PhpOffice\Common\Adapter\Zip\ZipArchiveAdapter;
-use PhpOffice\PhpPresentation\Exception\DirectoryNotFoundException;
-use PhpOffice\PhpPresentation\Exception\FileCopyException;
-use PhpOffice\PhpPresentation\Exception\FileRemoveException;
-use PhpOffice\PhpPresentation\Exception\InvalidParameterException;
-use PhpOffice\PhpPresentation\HashTable;
-use PhpOffice\PhpPresentation\PhpPresentation;
+use PhpOffice2\PhpPresentation\Exception\DirectoryNotFoundException;
+use PhpOffice2\PhpPresentation\Exception\FileCopyException;
+use PhpOffice2\PhpPresentation\Exception\FileRemoveException;
+use PhpOffice2\PhpPresentation\Exception\InvalidParameterException;
+use PhpOffice2\PhpPresentation\HashTable;
+use PhpOffice2\PhpPresentation\PhpPresentation;
 
 /**
  * ODPresentation writer.

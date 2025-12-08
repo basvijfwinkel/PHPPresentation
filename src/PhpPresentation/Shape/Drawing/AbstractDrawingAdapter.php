@@ -18,9 +18,9 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Shape\Drawing;
+namespace PhpOffice2\PhpPresentation\Shape\Drawing;
 
-use PhpOffice\PhpPresentation\Shape\AbstractGraphic;
+use PhpOffice2\PhpPresentation\Shape\AbstractGraphic;
 
 abstract class AbstractDrawingAdapter extends AbstractGraphic
 {

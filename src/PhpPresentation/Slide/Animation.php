@@ -18,9 +18,9 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Slide;
+namespace PhpOffice2\PhpPresentation\Slide;
 
-use PhpOffice\PhpPresentation\Traits\ShapeCollection;
+use PhpOffice2\PhpPresentation\Traits\ShapeCollection;
 
 class Animation
 {

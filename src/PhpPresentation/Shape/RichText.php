@@ -18,14 +18,14 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Shape;
+namespace PhpOffice2\PhpPresentation\Shape;
 
-use PhpOffice\PhpPresentation\AbstractShape;
-use PhpOffice\PhpPresentation\ComparableInterface;
-use PhpOffice\PhpPresentation\Exception\NotAllowedValueException;
-use PhpOffice\PhpPresentation\Exception\OutOfBoundsException;
-use PhpOffice\PhpPresentation\Shape\RichText\Paragraph;
-use PhpOffice\PhpPresentation\Shape\RichText\TextElementInterface;
+use PhpOffice2\PhpPresentation\AbstractShape;
+use PhpOffice2\PhpPresentation\ComparableInterface;
+use PhpOffice2\PhpPresentation\Exception\NotAllowedValueException;
+use PhpOffice2\PhpPresentation\Exception\OutOfBoundsException;
+use PhpOffice2\PhpPresentation\Shape\RichText\Paragraph;
+use PhpOffice2\PhpPresentation\Shape\RichText\TextElementInterface;
 
 /**
  * \PhpOffice\PhpPresentation\Shape\RichText.

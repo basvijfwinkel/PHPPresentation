@@ -18,11 +18,11 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation;
+namespace PhpOffice2\PhpPresentation;
 
-use PhpOffice\PhpPresentation\Slide\AbstractSlide;
-use PhpOffice\PhpPresentation\Slide\Note;
-use PhpOffice\PhpPresentation\Slide\SlideLayout;
+use PhpOffice2\PhpPresentation\Slide\AbstractSlide;
+use PhpOffice2\PhpPresentation\Slide\Note;
+use PhpOffice2\PhpPresentation\Slide\SlideLayout;
 
 /**
  * Slide class.

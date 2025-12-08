@@ -18,7 +18,7 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Style;
+namespace PhpOffice2\PhpPresentation\Style;
 
 /**
  * PhpOffice\PhpPresentation\Style\ColorMap.

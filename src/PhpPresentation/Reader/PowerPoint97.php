@@ -18,26 +18,26 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Reader;
+namespace PhpOffice2\PhpPresentation\Reader;
 
 use Exception;
 use PhpOffice\Common\Microsoft\OLERead;
 use PhpOffice\Common\Text;
-use PhpOffice\PhpPresentation\AbstractShape;
-use PhpOffice\PhpPresentation\Exception\FeatureNotImplementedException;
-use PhpOffice\PhpPresentation\Exception\FileNotFoundException;
-use PhpOffice\PhpPresentation\Exception\InvalidFileFormatException;
-use PhpOffice\PhpPresentation\PhpPresentation;
-use PhpOffice\PhpPresentation\Shape;
-use PhpOffice\PhpPresentation\Shape\Drawing;
-use PhpOffice\PhpPresentation\Shape\Group;
-use PhpOffice\PhpPresentation\Shape\Hyperlink;
-use PhpOffice\PhpPresentation\Shape\Line;
-use PhpOffice\PhpPresentation\Shape\RichText;
-use PhpOffice\PhpPresentation\Style\Alignment;
-use PhpOffice\PhpPresentation\Style\Bullet;
-use PhpOffice\PhpPresentation\Style\Color;
-use PhpOffice\PhpPresentation\Style\Font;
+use PhpOffice2\PhpPresentation\AbstractShape;
+use PhpOffice2\PhpPresentation\Exception\FeatureNotImplementedException;
+use PhpOffice2\PhpPresentation\Exception\FileNotFoundException;
+use PhpOffice2\PhpPresentation\Exception\InvalidFileFormatException;
+use PhpOffice2\PhpPresentation\PhpPresentation;
+use PhpOffice2\PhpPresentation\Shape;
+use PhpOffice2\PhpPresentation\Shape\Drawing;
+use PhpOffice2\PhpPresentation\Shape\Group;
+use PhpOffice2\PhpPresentation\Shape\Hyperlink;
+use PhpOffice2\PhpPresentation\Shape\Line;
+use PhpOffice2\PhpPresentation\Shape\RichText;
+use PhpOffice2\PhpPresentation\Style\Alignment;
+use PhpOffice2\PhpPresentation\Style\Bullet;
+use PhpOffice2\PhpPresentation\Style\Color;
+use PhpOffice2\PhpPresentation\Style\Font;
 
 /**
  * Serialized format reader.

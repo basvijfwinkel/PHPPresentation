@@ -18,11 +18,11 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Writer\ODPresentation;
+namespace PhpOffice2\PhpPresentation\Writer\ODPresentation;
 
 use PhpOffice\Common\Adapter\Zip\ZipInterface;
 use PhpOffice\Common\XMLWriter;
-use PhpOffice\PhpPresentation\DocumentProperties;
+use PhpOffice2\PhpPresentation\DocumentProperties;
 
 class Meta extends AbstractDecoratorWriter
 {

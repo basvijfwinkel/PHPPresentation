@@ -18,10 +18,10 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Traits;
+namespace PhpOffice2\PhpPresentation\Traits;
 
-use PhpOffice\PhpPresentation\AbstractShape;
-use PhpOffice\PhpPresentation\ShapeContainerInterface;
+use PhpOffice2\PhpPresentation\AbstractShape;
+use PhpOffice2\PhpPresentation\ShapeContainerInterface;
 
 trait ShapeCollection
 {

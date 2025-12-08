@@ -18,7 +18,7 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Slide;
+namespace PhpOffice2\PhpPresentation\Slide;
 
 /**
  * Transition class.

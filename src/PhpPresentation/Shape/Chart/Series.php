@@ -18,12 +18,12 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Shape\Chart;
+namespace PhpOffice2\PhpPresentation\Shape\Chart;
 
-use PhpOffice\PhpPresentation\ComparableInterface;
-use PhpOffice\PhpPresentation\Style\Fill;
-use PhpOffice\PhpPresentation\Style\Font;
-use PhpOffice\PhpPresentation\Style\Outline;
+use PhpOffice2\PhpPresentation\ComparableInterface;
+use PhpOffice2\PhpPresentation\Style\Fill;
+use PhpOffice2\PhpPresentation\Style\Font;
+use PhpOffice2\PhpPresentation\Style\Outline;
 
 class Series implements ComparableInterface
 {

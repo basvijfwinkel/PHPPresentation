@@ -18,9 +18,9 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Shape\Chart;
+namespace PhpOffice2\PhpPresentation\Shape\Chart;
 
-use PhpOffice\PhpPresentation\Style\Outline;
+use PhpOffice2\PhpPresentation\Style\Outline;
 
 class Gridlines
 {

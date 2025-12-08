@@ -18,11 +18,11 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Shape\Chart;
+namespace PhpOffice2\PhpPresentation\Shape\Chart;
 
-use PhpOffice\PhpPresentation\ComparableInterface;
-use PhpOffice\PhpPresentation\Exception\UndefinedChartTypeException;
-use PhpOffice\PhpPresentation\Shape\Chart\Type\AbstractType;
+use PhpOffice2\PhpPresentation\ComparableInterface;
+use PhpOffice2\PhpPresentation\Exception\UndefinedChartTypeException;
+use PhpOffice2\PhpPresentation\Shape\Chart\Type\AbstractType;
 
 /**
  * \PhpOffice\PhpPresentation\Shape\Chart\PlotArea.

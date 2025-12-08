@@ -18,7 +18,7 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Shape\Drawing;
+namespace PhpOffice2\PhpPresentation\Shape\Drawing;
 
 use GdImage;
 

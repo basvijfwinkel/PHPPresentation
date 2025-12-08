@@ -18,13 +18,13 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Shape;
+namespace PhpOffice2\PhpPresentation\Shape;
 
-use PhpOffice\PhpPresentation\ComparableInterface;
-use PhpOffice\PhpPresentation\Shape\Chart\Legend;
-use PhpOffice\PhpPresentation\Shape\Chart\PlotArea;
-use PhpOffice\PhpPresentation\Shape\Chart\Title;
-use PhpOffice\PhpPresentation\Shape\Chart\View3D;
+use PhpOffice2\PhpPresentation\ComparableInterface;
+use PhpOffice2\PhpPresentation\Shape\Chart\Legend;
+use PhpOffice2\PhpPresentation\Shape\Chart\PlotArea;
+use PhpOffice2\PhpPresentation\Shape\Chart\Title;
+use PhpOffice2\PhpPresentation\Shape\Chart\View3D;
 
 /**
  * Chart element.

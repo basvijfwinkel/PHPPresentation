@@ -18,14 +18,14 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Reader;
+namespace PhpOffice2\PhpPresentation\Reader;
 
 use PhpOffice\Common\File;
-use PhpOffice\PhpPresentation\Exception\FileNotFoundException;
-use PhpOffice\PhpPresentation\Exception\InvalidFileFormatException;
-use PhpOffice\PhpPresentation\PhpPresentation;
-use PhpOffice\PhpPresentation\Shape\Drawing\AbstractDrawingAdapter;
-use PhpOffice\PhpPresentation\Shape\Drawing\File as DrawingFile;
+use PhpOffice2\PhpPresentation\Exception\FileNotFoundException;
+use PhpOffice2\PhpPresentation\Exception\InvalidFileFormatException;
+use PhpOffice2\PhpPresentation\PhpPresentation;
+use PhpOffice2\PhpPresentation\Shape\Drawing\AbstractDrawingAdapter;
+use PhpOffice2\PhpPresentation\Shape\Drawing\File as DrawingFile;
 use ZipArchive;
 
 /**

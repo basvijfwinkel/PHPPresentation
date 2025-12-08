@@ -18,16 +18,17 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Slide;
+namespace PhpOffice2
+\PhpPresentation\Slide;
 
-use PhpOffice\PhpPresentation\ComparableInterface;
-use PhpOffice\PhpPresentation\PhpPresentation;
-use PhpOffice\PhpPresentation\ShapeContainerInterface;
-use PhpOffice\PhpPresentation\Slide\Background\Color as BackgroundColor;
-use PhpOffice\PhpPresentation\Style\Color;
-use PhpOffice\PhpPresentation\Style\ColorMap;
-use PhpOffice\PhpPresentation\Style\SchemeColor;
-use PhpOffice\PhpPresentation\Style\TextStyle;
+use PhpOffice2\PhpPresentation\ComparableInterface;
+use PhpOffice2\PhpPresentation\PhpPresentation;
+use PhpOffice2\PhpPresentation\ShapeContainerInterface;
+use PhpOffice2\PhpPresentation\Slide\Background\Color as BackgroundColor;
+use PhpOffice2\PhpPresentation\Style\Color;
+use PhpOffice2\PhpPresentation\Style\ColorMap;
+use PhpOffice2\PhpPresentation\Style\SchemeColor;
+use PhpOffice2\PhpPresentation\Style\TextStyle;
 
 class SlideMaster extends AbstractSlide implements ComparableInterface, ShapeContainerInterface
 {

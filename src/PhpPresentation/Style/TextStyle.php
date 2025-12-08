@@ -18,9 +18,9 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Style;
+namespace PhpOffice2\PhpPresentation\Style;
 
-use PhpOffice\PhpPresentation\Shape\RichText\Paragraph as RichTextParagraph;
+use PhpOffice2\PhpPresentation\Shape\RichText\Paragraph as RichTextParagraph;
 
 class TextStyle
 {

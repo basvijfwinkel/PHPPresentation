@@ -18,29 +18,29 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Reader;
+namespace PhpOffice2\PhpPresentation\Reader;
 
 use DateTime;
 use DOMElement;
-use PhpOffice\Common\Drawing as CommonDrawing;
-use PhpOffice\Common\XMLReader;
-use PhpOffice\PhpPresentation\DocumentProperties;
-use PhpOffice\PhpPresentation\Exception\FileNotFoundException;
-use PhpOffice\PhpPresentation\Exception\InvalidFileFormatException;
-use PhpOffice\PhpPresentation\PhpPresentation;
-use PhpOffice\PhpPresentation\PresentationProperties;
-use PhpOffice\PhpPresentation\Shape\Drawing\Base64;
-use PhpOffice\PhpPresentation\Shape\Drawing\Gd;
-use PhpOffice\PhpPresentation\Shape\RichText;
-use PhpOffice\PhpPresentation\Shape\RichText\Paragraph;
-use PhpOffice\PhpPresentation\Slide\Background\Color as BackgroundColor;
-use PhpOffice\PhpPresentation\Slide\Background\Image;
-use PhpOffice\PhpPresentation\Style\Alignment;
-use PhpOffice\PhpPresentation\Style\Bullet;
-use PhpOffice\PhpPresentation\Style\Color;
-use PhpOffice\PhpPresentation\Style\Fill;
-use PhpOffice\PhpPresentation\Style\Font;
-use PhpOffice\PhpPresentation\Style\Shadow;
+use PhpOffice2\Common\Drawing as CommonDrawing;
+use PhpOffice2\Common\XMLReader;
+use PhpOffice2\PhpPresentation\DocumentProperties;
+use PhpOffice2\PhpPresentation\Exception\FileNotFoundException;
+use PhpOffice2\PhpPresentation\Exception\InvalidFileFormatException;
+use PhpOffice2\PhpPresentation\PhpPresentation;
+use PhpOffice2\PhpPresentation\PresentationProperties;
+use PhpOffice2\PhpPresentation\Shape\Drawing\Base64;
+use PhpOffice2\PhpPresentation\Shape\Drawing\Gd;
+use PhpOffice2\PhpPresentation\Shape\RichText;
+use PhpOffice2\PhpPresentation\Shape\RichText\Paragraph;
+use PhpOffice2\PhpPresentation\Slide\Background\Color as BackgroundColor;
+use PhpOffice2\PhpPresentation\Slide\Background\Image;
+use PhpOffice2\PhpPresentation\Style\Alignment;
+use PhpOffice2\PhpPresentation\Style\Bullet;
+use PhpOffice2\PhpPresentation\Style\Color;
+use PhpOffice2\PhpPresentation\Style\Fill;
+use PhpOffice2\PhpPresentation\Style\Font;
+use PhpOffice2\PhpPresentation\Style\Shadow;
 use ZipArchive;
 
 /**

@@ -18,33 +18,33 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Writer\ODPresentation;
+namespace PhpOffice2\PhpPresentation\Writer\ODPresentation;
 
 use PhpOffice\Common\Adapter\Zip\ZipInterface;
 use PhpOffice\Common\Drawing as CommonDrawing;
 use PhpOffice\Common\Text;
 use PhpOffice\Common\XMLWriter;
-use PhpOffice\PhpPresentation\PresentationProperties;
-use PhpOffice\PhpPresentation\Shape\Chart;
-use PhpOffice\PhpPresentation\Shape\Comment;
-use PhpOffice\PhpPresentation\Shape\Drawing\AbstractDrawingAdapter;
-use PhpOffice\PhpPresentation\Shape\Group;
-use PhpOffice\PhpPresentation\Shape\Line;
-use PhpOffice\PhpPresentation\Shape\Media;
-use PhpOffice\PhpPresentation\Shape\RichText;
-use PhpOffice\PhpPresentation\Shape\RichText\BreakElement;
-use PhpOffice\PhpPresentation\Shape\RichText\Paragraph;
-use PhpOffice\PhpPresentation\Shape\RichText\Run;
-use PhpOffice\PhpPresentation\Shape\RichText\TextElement;
-use PhpOffice\PhpPresentation\Shape\Table;
-use PhpOffice\PhpPresentation\Slide;
-use PhpOffice\PhpPresentation\Slide\Note;
-use PhpOffice\PhpPresentation\Slide\Transition;
-use PhpOffice\PhpPresentation\Style\Alignment;
-use PhpOffice\PhpPresentation\Style\Border;
-use PhpOffice\PhpPresentation\Style\Fill;
-use PhpOffice\PhpPresentation\Style\Font;
-use PhpOffice\PhpPresentation\Style\Shadow;
+use PhpOffice2\PhpPresentation\PresentationProperties;
+use PhpOffice2\PhpPresentation\Shape\Chart;
+use PhpOffice2\PhpPresentation\Shape\Comment;
+use PhpOffice2\PhpPresentation\Shape\Drawing\AbstractDrawingAdapter;
+use PhpOffice2\PhpPresentation\Shape\Group;
+use PhpOffice2\PhpPresentation\Shape\Line;
+use PhpOffice2\PhpPresentation\Shape\Media;
+use PhpOffice2\PhpPresentation\Shape\RichText;
+use PhpOffice2\PhpPresentation\Shape\RichText\BreakElement;
+use PhpOffice2\PhpPresentation\Shape\RichText\Paragraph;
+use PhpOffice2\PhpPresentation\Shape\RichText\Run;
+use PhpOffice2\PhpPresentation\Shape\RichText\TextElement;
+use PhpOffice2\PhpPresentation\Shape\Table;
+use PhpOffice2\PhpPresentation\Slide;
+use PhpOffice2\PhpPresentation\Slide\Note;
+use PhpOffice2\PhpPresentation\Slide\Transition;
+use PhpOffice2\PhpPresentation\Style\Alignment;
+use PhpOffice2\PhpPresentation\Style\Border;
+use PhpOffice2\PhpPresentation\Style\Fill;
+use PhpOffice2\PhpPresentation\Style\Font;
+use PhpOffice2\PhpPresentation\Style\Shadow;
 
 class Content extends AbstractDecoratorWriter
 {

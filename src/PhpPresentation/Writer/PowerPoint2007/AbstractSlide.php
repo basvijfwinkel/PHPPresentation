@@ -18,40 +18,40 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Writer\PowerPoint2007;
+namespace PhpOffice2\PhpPresentation\Writer\PowerPoint2007;
 
 use ArrayObject;
 use PhpOffice\Common\Drawing as CommonDrawing;
 use PhpOffice\Common\Text;
 use PhpOffice\Common\XMLWriter;
-use PhpOffice\PhpPresentation\AbstractShape;
-use PhpOffice\PhpPresentation\Exception\UndefinedChartTypeException;
-use PhpOffice\PhpPresentation\Shape\AbstractGraphic;
-use PhpOffice\PhpPresentation\Shape\AutoShape;
-use PhpOffice\PhpPresentation\Shape\Chart as ShapeChart;
-use PhpOffice\PhpPresentation\Shape\Comment;
-use PhpOffice\PhpPresentation\Shape\Drawing\AbstractDrawingAdapter;
-use PhpOffice\PhpPresentation\Shape\Drawing\File as ShapeDrawingFile;
-use PhpOffice\PhpPresentation\Shape\Drawing\Gd as ShapeDrawingGd;
-use PhpOffice\PhpPresentation\Shape\Group;
-use PhpOffice\PhpPresentation\Shape\Line;
-use PhpOffice\PhpPresentation\Shape\Media;
-use PhpOffice\PhpPresentation\Shape\Placeholder;
-use PhpOffice\PhpPresentation\Shape\RichText;
-use PhpOffice\PhpPresentation\Shape\RichText\BreakElement;
-use PhpOffice\PhpPresentation\Shape\RichText\Paragraph;
-use PhpOffice\PhpPresentation\Shape\RichText\Run;
-use PhpOffice\PhpPresentation\Shape\RichText\TextElement;
-use PhpOffice\PhpPresentation\Shape\Table as ShapeTable;
-use PhpOffice\PhpPresentation\Slide;
-use PhpOffice\PhpPresentation\Slide\AbstractSlide as AbstractSlideAlias;
-use PhpOffice\PhpPresentation\Slide\Note;
-use PhpOffice\PhpPresentation\Style\Alignment;
-use PhpOffice\PhpPresentation\Style\Border;
-use PhpOffice\PhpPresentation\Style\Bullet;
-use PhpOffice\PhpPresentation\Style\Color;
-use PhpOffice\PhpPresentation\Style\Font;
-use PhpOffice\PhpPresentation\Style\Shadow;
+use PhpOffice2\PhpPresentation\AbstractShape;
+use PhpOffice2\PhpPresentation\Exception\UndefinedChartTypeException;
+use PhpOffice2\PhpPresentation\Shape\AbstractGraphic;
+use PhpOffice2\PhpPresentation\Shape\AutoShape;
+use PhpOffice2\PhpPresentation\Shape\Chart as ShapeChart;
+use PhpOffice2\PhpPresentation\Shape\Comment;
+use PhpOffice2\PhpPresentation\Shape\Drawing\AbstractDrawingAdapter;
+use PhpOffice2\PhpPresentation\Shape\Drawing\File as ShapeDrawingFile;
+use PhpOffice2\PhpPresentation\Shape\Drawing\Gd as ShapeDrawingGd;
+use PhpOffice2\PhpPresentation\Shape\Group;
+use PhpOffice2\PhpPresentation\Shape\Line;
+use PhpOffice2\PhpPresentation\Shape\Media;
+use PhpOffice2\PhpPresentation\Shape\Placeholder;
+use PhpOffice2\PhpPresentation\Shape\RichText;
+use PhpOffice2\PhpPresentation\Shape\RichText\BreakElement;
+use PhpOffice2\PhpPresentation\Shape\RichText\Paragraph;
+use PhpOffice2\PhpPresentation\Shape\RichText\Run;
+use PhpOffice2\PhpPresentation\Shape\RichText\TextElement;
+use PhpOffice2\PhpPresentation\Shape\Table as ShapeTable;
+use PhpOffice2\PhpPresentation\Slide;
+use PhpOffice2\PhpPresentation\Slide\AbstractSlide as AbstractSlideAlias;
+use PhpOffice2\PhpPresentation\Slide\Note;
+use PhpOffice2\PhpPresentation\Style\Alignment;
+use PhpOffice2\PhpPresentation\Style\Border;
+use PhpOffice2\PhpPresentation\Style\Bullet;
+use PhpOffice2\PhpPresentation\Style\Color;
+use PhpOffice2\PhpPresentation\Style\Font;
+use PhpOffice2\PhpPresentation\Style\Shadow;
 
 abstract class AbstractSlide extends AbstractDecoratorWriter
 {

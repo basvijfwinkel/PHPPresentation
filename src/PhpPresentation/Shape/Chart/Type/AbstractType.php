@@ -18,10 +18,10 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Shape\Chart\Type;
+namespace PhpOffice2\PhpPresentation\Shape\Chart\Type;
 
-use PhpOffice\PhpPresentation\ComparableInterface;
-use PhpOffice\PhpPresentation\Shape\Chart\Series;
+use PhpOffice2\PhpPresentation\ComparableInterface;
+use PhpOffice2\PhpPresentation\Shape\Chart\Series;
 
 /**
  * \PhpOffice\PhpPresentation\Shape\Chart\Type.

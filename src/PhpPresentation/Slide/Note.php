@@ -18,14 +18,14 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Slide;
+namespace PhpOffice2\PhpPresentation\Slide;
 
-use PhpOffice\PhpPresentation\ComparableInterface;
-use PhpOffice\PhpPresentation\GeometryCalculator;
-use PhpOffice\PhpPresentation\Shape\RichText;
-use PhpOffice\PhpPresentation\ShapeContainerInterface;
-use PhpOffice\PhpPresentation\Slide;
-use PhpOffice\PhpPresentation\Traits\ShapeCollection;
+use PhpOffice2\PhpPresentation\ComparableInterface;
+use PhpOffice2\PhpPresentation\GeometryCalculator;
+use PhpOffice2\PhpPresentation\Shape\RichText;
+use PhpOffice2\PhpPresentation\ShapeContainerInterface;
+use PhpOffice2\PhpPresentation\Slide;
+use PhpOffice2\PhpPresentation\Traits\ShapeCollection;
 
 class Note implements ComparableInterface, ShapeContainerInterface
 {
