@@ -1,8 +1,8 @@
 <?php
 
-use PhpOffice\PhpPresentation\PhpPresentation;
-use PhpOffice\PhpPresentation\Shape\Placeholder;
-use PhpOffice\PhpPresentation\Style\Color;
+use PhpOffice2\PhpPresentation\PhpPresentation;
+use PhpOffice2\PhpPresentation\Shape\Placeholder;
+use PhpOffice2\PhpPresentation\Style\Color;
 
 include_once 'Sample_Header.php';
 

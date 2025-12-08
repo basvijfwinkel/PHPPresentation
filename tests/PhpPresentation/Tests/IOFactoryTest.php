@@ -18,12 +18,12 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Tests;
+namespace PhpOffice2\PhpPresentation\Tests;
 
-use PhpOffice\PhpPresentation\Exception\InvalidClassException;
-use PhpOffice\PhpPresentation\Exception\InvalidFileFormatException;
-use PhpOffice\PhpPresentation\IOFactory;
-use PhpOffice\PhpPresentation\PhpPresentation;
+use PhpOffice2\PhpPresentation\Exception\InvalidClassException;
+use PhpOffice2\PhpPresentation\Exception\InvalidFileFormatException;
+use PhpOffice2\PhpPresentation\IOFactory;
+use PhpOffice2\PhpPresentation\PhpPresentation;
 use PHPUnit\Framework\TestCase;
 
 /**

@@ -154,40 +154,49 @@ class PowerPoint2007 implements ReaderInterface
     protected function loadFile(string $pFilename): PhpPresentation
     {
         $this->oPhpPresentation = new PhpPresentation();
+
         $this->oPhpPresentation->removeSlideByIndex();
+
         $this->oPhpPresentation->setAllMasterSlides([]);
+
         $this->filename = $pFilename;
 
         $this->oZip = new ZipArchive();
         $this->oZip->open($this->filename);
         $docPropsCore = $this->oZip->getFromName('docProps/core.xml');
-        if (false !== $docPropsCore) {
+        if (false !== $docPropsCore) 
+        {
             $this->loadDocumentProperties($docPropsCore);
         }
 
         $docThumbnail = $this->oZip->getFromName('_rels/.rels');
-        if ($docThumbnail !== false) {
+        if ($docThumbnail !== false)
+        {
             $this->loadThumbnailProperties($docThumbnail);
         }
 
         $docPropsCustom = $this->oZip->getFromName('docProps/custom.xml');
-        if (false !== $docPropsCustom) {
+        if (false !== $docPropsCustom)
+        {
             $this->loadCustomProperties($docPropsCustom);
         }
 
         $pptViewProps = $this->oZip->getFromName('ppt/viewProps.xml');
-        if (false !== $pptViewProps) {
+        if (false !== $pptViewProps)
+        {
             $this->loadViewProperties($pptViewProps);
         }
 
         $pptPresentation = $this->oZip->getFromName('ppt/presentation.xml');
-        if (false !== $pptPresentation) {
+        if (false !== $pptPresentation)
+        {
             $this->loadDocumentLayout($pptPresentation);
             $this->loadSlides($pptPresentation);
         }
 
         $pptPresProps = $this->oZip->getFromName('ppt/presProps.xml');
-        if (false !== $pptPresProps) {
+        if (false !== $pptPresProps)
+        {
             $this->loadPresentationProperties($pptPresentation);
         }
 
@@ -330,25 +339,31 @@ class PowerPoint2007 implements ReaderInterface
     {
         $xmlReader = new XMLReader();
         // @phpstan-ignore-next-line
-        if ($xmlReader->getDomFromString($sPart)) {
+        if ($xmlReader->getDomFromString($sPart))
+        {
             $element = $xmlReader->getElement('/p:presentationPr/p:showPr');
-            if ($element instanceof DOMElement) {
-                if ($element->hasAttribute('loop')) {
+            if ($element instanceof DOMElement)
+            {
+                if ($element->hasAttribute('loop'))
+                {
                     $this->oPhpPresentation->getPresentationProperties()->setLoopContinuouslyUntilEsc(
                         (bool) $element->getAttribute('loop')
                     );
                 }
-                if (null !== $xmlReader->getElement('p:present', $element)) {
+                if (null !== $xmlReader->getElement('p:present', $element))
+                {
                     $this->oPhpPresentation->getPresentationProperties()->setSlideshowType(
                         PresentationProperties::SLIDESHOW_TYPE_PRESENT
                     );
                 }
-                if (null !== $xmlReader->getElement('p:browse', $element)) {
+                if (null !== $xmlReader->getElement('p:browse', $element))
+                {
                     $this->oPhpPresentation->getPresentationProperties()->setSlideshowType(
                         PresentationProperties::SLIDESHOW_TYPE_BROWSE
                     );
                 }
-                if (null !== $xmlReader->getElement('p:kiosk', $element)) {
+                if (null !== $xmlReader->getElement('p:kiosk', $element))
+                {
                     $this->oPhpPresentation->getPresentationProperties()->setSlideshowType(
                         PresentationProperties::SLIDESHOW_TYPE_KIOSK
                     );

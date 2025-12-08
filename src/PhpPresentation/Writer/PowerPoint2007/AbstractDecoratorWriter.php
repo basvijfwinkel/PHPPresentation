@@ -27,7 +27,7 @@ use PhpOffice2\PhpPresentation\Style\Color;
 use PhpOffice2\PhpPresentation\Style\Fill;
 use PhpOffice2\PhpPresentation\Style\Outline;
 
-abstract class AbstractDecoratorWriter extends \PhpOffice\PhpPresentation\Writer\AbstractDecoratorWriter
+abstract class AbstractDecoratorWriter extends \PhpOffice2\PhpPresentation\Writer\AbstractDecoratorWriter
 {
     /**
      * Write relationship.

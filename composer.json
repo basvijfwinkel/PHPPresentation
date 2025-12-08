@@ -36,7 +36,7 @@
     },
     "autoload": {
         "psr-4": {
-            "PhpOffice\\PhpPresentation\\": "src/PhpPresentation/"
+            "PhpOffice2\\PhpPresentation\\": "src/PhpPresentation/"
         }
     },
     "scripts": {

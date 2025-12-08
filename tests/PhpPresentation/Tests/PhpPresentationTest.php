@@ -18,14 +18,14 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Tests;
+namespace PhpOffice2\PhpPresentation\Tests;
 
-use PhpOffice\PhpPresentation\DocumentLayout;
-use PhpOffice\PhpPresentation\DocumentProperties;
-use PhpOffice\PhpPresentation\Exception\OutOfBoundsException;
-use PhpOffice\PhpPresentation\PhpPresentation;
-use PhpOffice\PhpPresentation\PresentationProperties;
-use PhpOffice\PhpPresentation\Slide;
+use PhpOffice2\PhpPresentation\DocumentLayout;
+use PhpOffice2\PhpPresentation\DocumentProperties;
+use PhpOffice2\PhpPresentation\Exception\OutOfBoundsException;
+use PhpOffice2\PhpPresentation\PhpPresentation;
+use PhpOffice2\PhpPresentation\PresentationProperties;
+use PhpOffice2\PhpPresentation\Slide;
 use PHPUnit\Framework\TestCase;
 
 /**

@@ -43,7 +43,7 @@ class IOFactory
      */
     public static function createWriter(PhpPresentation $phpPresentation, string $name = 'PowerPoint2007'): WriterInterface
     {
-        return self::loadClass('PhpOffice\\PhpPresentation\\Writer\\' . $name, 'Writer', $phpPresentation);
+        return self::loadClass('PhpOffice2\\PhpPresentation\\Writer\\' . $name, 'Writer', $phpPresentation);
     }
 
     /**
@@ -51,7 +51,7 @@ class IOFactory
      */
     public static function createReader(string $name): ReaderInterface
     {
-        return self::loadClass('PhpOffice\\PhpPresentation\\Reader\\' . $name, 'Reader');
+        return self::loadClass('PhpOffice2\\PhpPresentation\\Reader\\' . $name, 'Reader');
     }
 
     /**

@@ -18,11 +18,11 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Tests\Slide;
+namespace PhpOffice2\PhpPresentation\Tests\Slide;
 
-use PhpOffice\PhpPresentation\PhpPresentation;
-use PhpOffice\PhpPresentation\Slide;
-use PhpOffice\PhpPresentation\Slide\Iterator;
+use PhpOffice2\PhpPresentation\PhpPresentation;
+use PhpOffice2\PhpPresentation\Slide;
+use PhpOffice2\PhpPresentation\Slide\Iterator;
 use PHPUnit\Framework\TestCase;
 
 /**

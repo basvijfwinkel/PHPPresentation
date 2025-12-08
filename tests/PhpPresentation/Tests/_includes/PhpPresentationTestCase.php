@@ -18,7 +18,7 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Tests;
+namespace PhpOffice2\PhpPresentation\Tests;
 
 use DOMDocument;
 use DOMElement;
@@ -26,8 +26,8 @@ use DOMNode;
 use DOMNodeList;
 use DOMXPath;
 use LibXMLError;
-use PhpOffice\PhpPresentation\IOFactory;
-use PhpOffice\PhpPresentation\PhpPresentation;
+use PhpOffice2\PhpPresentation\IOFactory;
+use PhpOffice2\PhpPresentation\PhpPresentation;
 use PHPUnit\Framework\TestCase;
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;

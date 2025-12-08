@@ -22,7 +22,7 @@ namespace PhpOffice2\PhpPresentation\Writer\ODPresentation;
 
 use PhpOffice2\PhpPresentation\Shape\Chart;
 
-abstract class AbstractDecoratorWriter extends \PhpOffice\PhpPresentation\Writer\AbstractDecoratorWriter
+abstract class AbstractDecoratorWriter extends \PhpOffice2\PhpPresentation\Writer\AbstractDecoratorWriter
 {
     /**
      * @var Chart[]

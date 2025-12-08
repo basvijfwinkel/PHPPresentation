@@ -18,13 +18,13 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Tests\Writer;
+namespace PhpOffice2\PhpPresentation\Tests\Writer;
 
-use PhpOffice\Common\Adapter\Zip\ZipInterface;
-use PhpOffice\PhpPresentation\PhpPresentation;
-use PhpOffice\PhpPresentation\Tests\Writer\AbstractWriter as TestAbstractWriter;
-use PhpOffice\PhpPresentation\Writer\AbstractWriter;
-use PhpOffice\PhpPresentation\Writer\PDF\PDFWriterInterface;
+use PhpOffice2\Common\Adapter\Zip\ZipInterface;
+use PhpOffice2\PhpPresentation\PhpPresentation;
+use PhpOffice2\PhpPresentation\Tests\Writer\AbstractWriter as TestAbstractWriter;
+use PhpOffice2\PhpPresentation\Writer\AbstractWriter;
+use PhpOffice2\PhpPresentation\Writer\PDF\PDFWriterInterface;
 use PHPUnit\Framework\TestCase;
 
 require 'AbstractWriter.php';

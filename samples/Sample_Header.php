@@ -2,15 +2,15 @@
 /**
  * Header file.
  */
-use PhpOffice\PhpPresentation\Autoloader;
-use PhpOffice\PhpPresentation\IOFactory;
-use PhpOffice\PhpPresentation\PhpPresentation;
-use PhpOffice\PhpPresentation\Shape\Drawing;
-use PhpOffice\PhpPresentation\Shape\RichText;
-use PhpOffice\PhpPresentation\Slide;
-use PhpOffice\PhpPresentation\Style\Alignment;
-use PhpOffice\PhpPresentation\Style\Color;
-use PhpOffice\PhpPresentation\Writer\PDF\DomPDF;
+use PhpOffice2\PhpPresentation\Autoloader;
+use PhpOffice2\PhpPresentation\IOFactory;
+use PhpOffice2\PhpPresentation\PhpPresentation;
+use PhpOffice2\PhpPresentation\Shape\Drawing;
+use PhpOffice2\PhpPresentation\Shape\RichText;
+use PhpOffice2\PhpPresentation\Slide;
+use PhpOffice2\PhpPresentation\Style\Alignment;
+use PhpOffice2\PhpPresentation\Style\Color;
+use PhpOffice2\PhpPresentation\Writer\PDF\DomPDF;
 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);

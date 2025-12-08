@@ -2,24 +2,24 @@
 
 include_once 'Sample_Header.php';
 
-use PhpOffice\PhpPresentation\PhpPresentation;
-use PhpOffice\PhpPresentation\Shape\Chart\Gridlines;
-use PhpOffice\PhpPresentation\Shape\Chart\Legend;
-use PhpOffice\PhpPresentation\Shape\Chart\Marker;
-use PhpOffice\PhpPresentation\Shape\Chart\Series;
-use PhpOffice\PhpPresentation\Shape\Chart\Type\Area;
-use PhpOffice\PhpPresentation\Shape\Chart\Type\Bar;
-use PhpOffice\PhpPresentation\Shape\Chart\Type\Bar3D;
-use PhpOffice\PhpPresentation\Shape\Chart\Type\Doughnut;
-use PhpOffice\PhpPresentation\Shape\Chart\Type\Pie;
-use PhpOffice\PhpPresentation\Shape\Chart\Type\Pie3D;
-use PhpOffice\PhpPresentation\Shape\Chart\Type\Radar;
-use PhpOffice\PhpPresentation\Shape\Chart\Type\Scatter;
-use PhpOffice\PhpPresentation\Style\Alignment;
-use PhpOffice\PhpPresentation\Style\Border;
-use PhpOffice\PhpPresentation\Style\Color;
-use PhpOffice\PhpPresentation\Style\Fill;
-use PhpOffice\PhpPresentation\Style\Shadow;
+use PhpOffice2\PhpPresentation\PhpPresentation;
+use PhpOffice2\PhpPresentation\Shape\Chart\Gridlines;
+use PhpOffice2\PhpPresentation\Shape\Chart\Legend;
+use PhpOffice2\PhpPresentation\Shape\Chart\Marker;
+use PhpOffice2\PhpPresentation\Shape\Chart\Series;
+use PhpOffice2\PhpPresentation\Shape\Chart\Type\Area;
+use PhpOffice2\PhpPresentation\Shape\Chart\Type\Bar;
+use PhpOffice2\PhpPresentation\Shape\Chart\Type\Bar3D;
+use PhpOffice2\PhpPresentation\Shape\Chart\Type\Doughnut;
+use PhpOffice2\PhpPresentation\Shape\Chart\Type\Pie;
+use PhpOffice2\PhpPresentation\Shape\Chart\Type\Pie3D;
+use PhpOffice2\PhpPresentation\Shape\Chart\Type\Radar;
+use PhpOffice2\PhpPresentation\Shape\Chart\Type\Scatter;
+use PhpOffice2\PhpPresentation\Style\Alignment;
+use PhpOffice2\PhpPresentation\Style\Border;
+use PhpOffice2\PhpPresentation\Style\Color;
+use PhpOffice2\PhpPresentation\Style\Fill;
+use PhpOffice2\PhpPresentation\Style\Shadow;
 
 function fnSlide_Area(PhpPresentation $objPHPPresentation): void
 {

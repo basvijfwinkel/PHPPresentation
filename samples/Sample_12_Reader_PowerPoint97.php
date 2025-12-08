@@ -5,7 +5,7 @@ set_time_limit(10);
 include_once __DIR__ . '/Sample_PhpPptTree.php';
 include_once __DIR__ . '/Sample_Header.php';
 
-use PhpOffice\PhpPresentation\IOFactory;
+use PhpOffice2\PhpPresentation\IOFactory;
 
 $pptReader = IOFactory::createReader('PowerPoint97');
 $oPHPPresentation = $pptReader->load(__DIR__ . '/resources/Sample_12.ppt');

@@ -18,15 +18,15 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Tests;
+namespace PhpOffice2\PhpPresentation\Tests;
 
-use PhpOffice\PhpPresentation\PhpPresentation;
-use PhpOffice\PhpPresentation\Shape\Drawing\File;
-use PhpOffice\PhpPresentation\ShapeContainerInterface;
-use PhpOffice\PhpPresentation\Slide;
-use PhpOffice\PhpPresentation\Slide\AbstractBackground;
-use PhpOffice\PhpPresentation\Slide\Animation;
-use PhpOffice\PhpPresentation\Slide\Transition;
+use PhpOffice2\PhpPresentation\PhpPresentation;
+use PhpOffice2\PhpPresentation\Shape\Drawing\File;
+use PhpOffice2\PhpPresentation\ShapeContainerInterface;
+use PhpOffice2\PhpPresentation\Slide;
+use PhpOffice2\PhpPresentation\Slide\AbstractBackground;
+use PhpOffice2\PhpPresentation\Slide\Animation;
+use PhpOffice2\PhpPresentation\Slide\Transition;
 use PHPUnit\Framework\TestCase;
 
 /**

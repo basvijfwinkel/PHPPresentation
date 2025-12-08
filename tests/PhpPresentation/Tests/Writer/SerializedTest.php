@@ -18,12 +18,12 @@
 
 declare(strict_types=1);
 
-namespace PhpOffice\PhpPresentation\Tests\Writer;
+namespace PhpOffice2\PhpPresentation\Tests\Writer;
 
-use PhpOffice\PhpPresentation\Exception\DirectoryNotFoundException;
-use PhpOffice\PhpPresentation\Exception\InvalidParameterException;
-use PhpOffice\PhpPresentation\PhpPresentation;
-use PhpOffice\PhpPresentation\Writer\Serialized;
+use PhpOffice2\PhpPresentation\Exception\DirectoryNotFoundException;
+use PhpOffice2\PhpPresentation\Exception\InvalidParameterException;
+use PhpOffice2\PhpPresentation\PhpPresentation;
+use PhpOffice2\PhpPresentation\Writer\Serialized;
 use PHPUnit\Framework\TestCase;
 
 /**
