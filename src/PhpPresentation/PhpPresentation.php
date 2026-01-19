@@ -26,6 +26,8 @@ use PhpOffice\PhpPresentation\Slide\Iterator;
 use PhpOffice\PhpPresentation\Slide\SlideMaster;
 
 use PhpOffice\PhpPresentation\PowerPoint2019Objects\viewProps\ViewProps;
+use PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\Theme;
+
 use PhpOffice\PhpPresentation\PowerPoint2019Objects\Debug\DebugBase;
 
 /**
@@ -77,6 +79,8 @@ class PhpPresentation extends DebugBase
 
 // ======= new class for managing the viewProps
     protected $viewProps;
+
+    protected $theme;
 // ========================
 
 
@@ -100,6 +104,7 @@ $this->enablePersonalDebugLog();
         $this->setLayout(new DocumentLayout());
 
         $this->setDefaultViewProps();
+        $this->setDefaultTheme();
     }
 
     /**
@@ -386,5 +391,21 @@ $this->enablePersonalDebugLog();
     public function getViewProps():ViewProps
     {
         return $this->viewProps;
+    }
+
+    protected function setDefaultTheme(): void
+    {
+        $this->theme = new Theme();
+        $this->theme->loadDefaultSettings();
+    }
+
+    public function setTheme(Theme $theme) : void
+    {
+        $this->theme = $theme;
+    }
+
+    public function getTheme():Theme
+    {
+        return $this->theme;
     }
 }

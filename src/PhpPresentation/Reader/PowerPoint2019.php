@@ -29,8 +29,7 @@ use ZipArchive;
 use PhpOffice\Common\Drawing as CommonDrawing;
 use PhpOffice\Common\XMLReader;
 
-use PhpOffice\PhpPresentation\PowerPoint2019Objects\Debug\DebugBase;
-use PhpOffice\PhpPresentation\PowerPoint2019Objects\viewProps\ViewProps;
+use PhpOffice\PhpPresentation\PowerPoint2019Objects\Debug\DebugBase; // my debug class
 
 use PhpOffice\PhpPresentation\DocumentLayout;
 use PhpOffice\PhpPresentation\DocumentProperties;
@@ -62,7 +61,6 @@ use PhpOffice\PhpPresentation\Style\Outline;
 use PhpOffice\PhpPresentation\Style\SchemeColor;
 use PhpOffice\PhpPresentation\Style\Shadow;
 use PhpOffice\PhpPresentation\Style\TextStyle;
-
 
 /**
  * Serialized format reader.
@@ -188,7 +186,6 @@ class PowerPoint2019 extends DebugBase implements ReaderInterface
         $pptViewProps = $this->oZip->getFromName('ppt/viewProps.xml');
         if ($pptViewProps !== false)
         {
-$this->line('Loading viewProps.xml');
             $this->loadViewProperties($pptViewProps);
         }
 
@@ -679,10 +676,13 @@ $this->e('No parse errors');
             }
 
             // Load the theme
-            foreach ($this->arrayRels[$oSlideMaster->getRelsIndex()] as $arrayRel) {
-                if ('http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme' == $arrayRel['Type']) {
+            foreach ($this->arrayRels[$oSlideMaster->getRelsIndex()] as $arrayRel)
+            {
+                if ($arrayRel['Type'] == 'http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme')
+                {
                     $pptTheme = $this->oZip->getFromName('ppt/' . substr($arrayRel['Target'], strrpos($arrayRel['Target'], '../') + 3));
-                    if (false !== $pptTheme) {
+                    if ($pptTheme !== false)
+                    {
                         $this->loadTheme($pptTheme, $oSlideMaster);
                     }
 
@@ -757,19 +757,43 @@ $this->e('No parse errors');
 
     protected function loadTheme(string $sPart, SlideMaster $oSlideMaster): void
     {
+// AAAAAAAAAAAAA
+// ======================== new code
+$this->enablePersonalDebugLog();
+        // load all theme data from the input string
+        $parseErrors = $this->oPhpPresentation->getTheme()->loadFromXMLString($sPart);
+        if ($parseErrors)
+        {
+            // there were some parse errors while loading the data from the xml
+$this->e('There were parse errors:');
+$this->e($this->oPhpPresentation->getTheme()->getParsingErrors());
+        }
+
+// TODO : set the Master color scheme
+//        how to support multiple color schemes from multiple files?
+
+// original code
+/*
         $xmlReader = new XMLReader();
         // @phpstan-ignore-next-line
-        if ($xmlReader->getDomFromString($sPart)) {
+        if ($xmlReader->getDomFromString($sPart))
+        {
             $oElements = $xmlReader->getElements('/a:theme/a:themeElements/a:clrScheme/*');
-            foreach ($oElements as $oElement) {
-                if ($oElement instanceof DOMElement) {
+            foreach ($oElements as $oElement)
+            {
+                if ($oElement instanceof DOMElement)
+                {
                     $oSchemeColor = new SchemeColor();
                     $oSchemeColor->setValue(str_replace('a:', '', $oElement->tagName));
                     $colorElement = $xmlReader->getElement('*', $oElement);
-                    if ($colorElement instanceof DOMElement) {
-                        if ($colorElement->hasAttribute('lastClr')) {
+                    if ($colorElement instanceof DOMElement)
+                    {
+                        if ($colorElement->hasAttribute('lastClr'))
+                        {
                             $oSchemeColor->setRGB($colorElement->getAttribute('lastClr'));
-                        } elseif ($colorElement->hasAttribute('val')) {
+                        }
+                        elseif ($colorElement->hasAttribute('val')) 
+                        {
                             $oSchemeColor->setRGB($colorElement->getAttribute('val'));
                         }
                     }
@@ -777,6 +801,7 @@ $this->e('No parse errors');
                 }
             }
         }
+*/
     }
 
     protected function loadSlideBackground(XMLReader $xmlReader, DOMElement $oElement, AbstractSlide $oSlide): void

@@ -28,11 +28,28 @@ class PptTheme extends AbstractDecoratorWriter
 {
     public function render(): ZipInterface
     {
-        foreach ($this->oPresentation->getAllMasterSlides() as $oMasterSlide) {
+// ============== New code
+        // Create XML writer
+        $objWriter = new XMLWriter(XMLWriter::STORAGE_MEMORY);
+
+        // XML header
+        $objWriter->startDocument('1.0', 'UTF-8', 'yes');
+
+        $this->getPresentation()->getTheme()->writeToXML($objWriter);
+
+        $this->getZip()->addFromString('ppt/theme/theme1.xml', $objWriter->getData());
+
+        return $this->getZip();
+
+// =============original code
+/*
+        foreach ($this->oPresentation->getAllMasterSlides() as $oMasterSlide)
+        {
             $this->getZip()->addFromString('ppt/theme/theme' . $oMasterSlide->getRelsIndex() . '.xml', $this->writeTheme($oMasterSlide));
         }
 
         return $this->getZip();
+*/
     }
 
     /**

@@ -59,21 +59,83 @@ class PP2019Element extends ParseHelper
 
     // mappings from classnames to namespaced classnames
     protected $namespacedClassnames = [
-                                       'ViewProps'       => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\viewProps\ViewProps',
-                                       'NormalViewPr'    => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\viewProps\NormalViewPr',
-                                       'RestoredLeft'    => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\viewProps\RestoredLeft',
-                                       'RestoredTop'     => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\viewProps\RestoredTop',
-                                       'CSldViewPr'      => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\viewProps\CSldViewPr',
-                                       'CViewPr'         => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\viewProps\CViewPr',
-                                       'SlideViewPr'     => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\viewProps\SlideViewPr',
-                                       'Scale'           => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\viewProps\Scale',
-                                       'Origin'          => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\viewProps\Origin',
-                                       'Sx'              => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\viewProps\Sx',
-                                       'Sy'              => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\viewProps\Sy',
-                                       'GuideLst'        => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\viewProps\GuideLst',
-                                       'GridSpacing'     => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\viewProps\GridSpacing',
-                                       'OutlineViewPr'   => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\viewProps\OutlineViewPr',
-                                       'NotesTextViewPr' => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\viewProps\NotesTextViewPr',
+                                       // viewProps
+                                       'ViewProps'         => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\viewProps\ViewProps',
+                                       'NormalViewPr'      => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\viewProps\NormalViewPr',
+                                       'RestoredLeft'      => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\viewProps\RestoredLeft',
+                                       'RestoredTop'       => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\viewProps\RestoredTop',
+                                       'CSldViewPr'        => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\viewProps\CSldViewPr',
+                                       'CViewPr'           => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\viewProps\CViewPr',
+                                       'SlideViewPr'       => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\viewProps\SlideViewPr',
+                                       'Scale'             => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\viewProps\Scale',
+                                       'Origin'            => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\viewProps\Origin',
+                                       'Sx'                => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\viewProps\Sx',
+                                       'Sy'                => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\viewProps\Sy',
+                                       'GuideLst'          => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\viewProps\GuideLst',
+                                       'GridSpacing'       => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\viewProps\GridSpacing',
+                                       'OutlineViewPr'     => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\viewProps\OutlineViewPr',
+                                       'NotesTextViewPr'   => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\viewProps\NotesTextViewPr',
+                                       // theme
+                                       'Accent1'           => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\Accent1',
+                                       'Accent2'           => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\Accent2',
+                                       'Accent3'           => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\Accent3',
+                                       'Accent4'           => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\Accent4',
+                                       'Accent5'           => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\Accent5',
+                                       'Accent6'           => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\Accent6',
+                                       'Alpha'             => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\Alpha',
+                                       'BgFillStyleLst'    => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\BgFillStyleLst',
+                                       'BodyPr'            => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\BodyPr',
+                                       'ClrScheme'         => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\ClrScheme',
+                                       'Cs'                => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\Cs',
+                                       'Dk1'               => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\Dk1',
+                                       'Dk2'               => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\Dk2',
+                                       'Ea'                => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\Ea',
+                                       'EffectLst'         => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\EffectLst',
+                                       'EffectRef'         => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\EffectRef',
+                                       'EffectStyleLst'    => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\EffectStyleLst',
+                                       'EffectStyle'       => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\EffectStyle',
+                                       'ExtLst'            => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\ExtLst',
+                                       'Ext'               => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\Ext',
+                                       'ExtraClrSchemeLst' => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\ExtraClrSchemeLst',
+                                       'FillRef'           => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\FillRef',
+                                       'FillStyleLst'      => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\FillStyleLst',
+                                       'FmtScheme'         => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\FmtScheme',
+                                       'FolHlink'          => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\FolHlink',
+                                       'Font'              => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\Font',
+                                       'FontRef'           => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\FontRef',
+                                       'FontScheme'        => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\FontScheme',
+                                       'GradFill'          => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\GradFill',
+                                       'GsLst'             => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\GsLst',
+                                       'Gs'                => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\Gs',
+                                       'Hlink'             => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\Hlink',
+                                       'Latin'             => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\Latin',
+                                       'Lin'               => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\Lin',
+                                       'LnDef'             => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\LnDef',
+                                       'Ln'                => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\Ln',
+                                       'LnRef'             => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\LnRef',
+                                       'LnStyleLst'        => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\LnStyleLst',
+                                       'LstStyle'          => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\LstStyle',
+                                       'Lt1'               => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\Lt1',
+                                       'Lt2'               => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\Lt2',
+                                       'LumMod'            => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\LumMod',
+                                       'MajorFont'         => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\MajorFont',
+                                       'MinorFont'         => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\MinorFont',
+                                       'Miter'             => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\Miter',
+                                       'ObjectDefaults'    => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\ObjectDefaults',
+                                       'OuterShdw'         => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\OuterShdw',
+                                       'PrstDash'          => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\PrstDash',
+                                       'SatMod'            => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\SatMod',
+                                       'SchemeClr'         => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\SchemeClr',
+                                       'Shade'             => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\Shade',
+                                       'SolidFill'         => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\SolidFill',
+                                       'SysClr'            => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\SysClr',
+                                       'SrgbClr'           => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\SrgbClr',
+                                       'SpPr'              => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\SpPr',
+                                       'Style'             => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\Style',
+                                       'ThemeElements'     => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\ThemeElements',
+                                       'ThemeFamily'       => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\ThemeFamily',
+                                       'Theme'             => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\Theme',
+                                       'Tint'              => 'PhpOffice\PhpPresentation\PowerPoint2019Objects\theme\Tint',
                                       ];
 
     public const VIEW_HANDOUT         = 'handoutView';
@@ -101,7 +163,7 @@ class PP2019Element extends ParseHelper
 
     function __construct()
     {
-        // prepare the namespaced names
+        // =========== prepare the namespaced names
 
         // namespaced elementName
         $this->namespacedElementName = (is_null($this->elementNamespace)?'':($this->elementNamespace.':')).$this->elementName;
@@ -244,7 +306,7 @@ class PP2019Element extends ParseHelper
                 $namespacedClassname = $this->namespacedClassnames[$classname]??null;
                 if (is_null($namespacedClassname))
                 {
-                    throw new Exception("Add '".$classname."' namespace to namespaceClassname array in PP2019Element");
+                    throw new Exception("Add '".$classname."' namespace to namespaceClassname array in PP2019Element. Called from ".$element->tagName."    ");
                 }
 
                 $this->childNodes[$childNodeName] = new $namespacedClassname;
@@ -406,11 +468,9 @@ class PP2019Element extends ParseHelper
         // do we have attributes?
         if ($this->attributes != [])
         {
-$this->e($this->attributes);
             foreach($this->attributes as $attrName => $attrValue)
             {
                 if (is_null($attrValue)) { continue; }
-$this->e($attrName."=".$attrValue);
                 $objWriter->writeAttribute($this->knownAttributes[$attrName]['namespacedName'], $attrValue);
             }
         }
@@ -420,6 +480,7 @@ $this->e($attrName."=".$attrValue);
         {
             foreach($this->childNodes as $childNode)
             {
+                if (is_null($childNode)) { continue; }
                 $childNode->writeToXML($objWriter);
             }
         }
