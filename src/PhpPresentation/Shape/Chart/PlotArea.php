@@ -92,8 +92,7 @@ class PlotArea implements ComparableInterface
 
     public function getType(): AbstractType
     {
-        if ($this->type === null)
-        {
+        if (null === $this->type) {
             throw new UndefinedChartTypeException();
         }
 

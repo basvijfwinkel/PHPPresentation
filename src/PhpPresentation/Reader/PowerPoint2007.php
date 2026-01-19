@@ -24,8 +24,6 @@ use DateTime;
 use DOMElement;
 use DOMNode;
 use DOMNodeList;
-use ZipArchive;
-
 use PhpOffice\Common\Drawing as CommonDrawing;
 use PhpOffice\Common\XMLReader;
 use PhpOffice\PhpPresentation\DocumentLayout;
@@ -58,7 +56,7 @@ use PhpOffice\PhpPresentation\Style\Outline;
 use PhpOffice\PhpPresentation\Style\SchemeColor;
 use PhpOffice\PhpPresentation\Style\Shadow;
 use PhpOffice\PhpPresentation\Style\TextStyle;
-
+use ZipArchive;
 
 /**
  * Serialized format reader.
@@ -162,42 +160,34 @@ class PowerPoint2007 implements ReaderInterface
 
         $this->oZip = new ZipArchive();
         $this->oZip->open($this->filename);
-
         $docPropsCore = $this->oZip->getFromName('docProps/core.xml');
-        if (false !== $docPropsCore)
-        {
+        if (false !== $docPropsCore) {
             $this->loadDocumentProperties($docPropsCore);
         }
 
         $docThumbnail = $this->oZip->getFromName('_rels/.rels');
-        if ($docThumbnail !== false)
-        {
+        if ($docThumbnail !== false) {
             $this->loadThumbnailProperties($docThumbnail);
         }
 
         $docPropsCustom = $this->oZip->getFromName('docProps/custom.xml');
-        if (false !== $docPropsCustom)
-        {
+        if (false !== $docPropsCustom) {
             $this->loadCustomProperties($docPropsCustom);
         }
 
         $pptViewProps = $this->oZip->getFromName('ppt/viewProps.xml');
-        if ($pptViewProps !== false)
-        {
+        if (false !== $pptViewProps) {
             $this->loadViewProperties($pptViewProps);
         }
 
         $pptPresentation = $this->oZip->getFromName('ppt/presentation.xml');
-        if (false !== $pptPresentation)
-        {
+        if (false !== $pptPresentation) {
             $this->loadDocumentLayout($pptPresentation);
-
             $this->loadSlides($pptPresentation);
         }
 
         $pptPresProps = $this->oZip->getFromName('ppt/presProps.xml');
-        if (false !== $pptPresProps)
-        {
+        if (false !== $pptPresProps) {
             $this->loadPresentationProperties($pptPresentation);
         }
 
@@ -374,14 +364,11 @@ class PowerPoint2007 implements ReaderInterface
     {
         $xmlReader = new XMLReader();
         // @phpstan-ignore-next-line
-        if ($xmlReader->getDomFromString($sPart))
-        {
+        if ($xmlReader->getDomFromString($sPart)) {
             $pathZoom = '/p:viewPr/p:slideViewPr/p:cSldViewPr/p:cViewPr/p:scale/a:sx';
             $oElement = $xmlReader->getElement($pathZoom);
-            if ($oElement instanceof DOMElement)
-            {
-                if ($oElement->hasAttribute('d') && $oElement->hasAttribute('n'))
-                {
+            if ($oElement instanceof DOMElement) {
+                if ($oElement->hasAttribute('d') && $oElement->hasAttribute('n')) {
                     $this->oPhpPresentation->getPresentationProperties()->setZoom((int) $oElement->getAttribute('n') / (int) $oElement->getAttribute('d'));
                 }
             }
@@ -401,26 +388,20 @@ class PowerPoint2007 implements ReaderInterface
             // Load the Masterslides
             $this->loadMasterSlides($xmlReader, $fileRels);
             // Continue with loading the slides
-            foreach ($xmlReader->getElements('/p:presentation/p:sldIdLst/p:sldId') as $oElement)
-            {
-                if (!($oElement instanceof DOMElement))
-                {
+            foreach ($xmlReader->getElements('/p:presentation/p:sldIdLst/p:sldId') as $oElement) {
+                if (!($oElement instanceof DOMElement)) {
                     continue;
                 }
                 $rId = $oElement->getAttribute('r:id');
                 $pathSlide = isset($this->arrayRels[$fileRels][$rId]) ? $this->arrayRels[$fileRels][$rId]['Target'] : '';
-                if (!empty($pathSlide))
-                {
+                if (!empty($pathSlide)) {
                     $pptSlide = $this->oZip->getFromName('ppt/' . $pathSlide);
-                    if (false !== $pptSlide)
-                    {
+                    if (false !== $pptSlide) {
                         $slideRels = 'ppt/slides/_rels/' . basename($pathSlide) . '.rels';
                         $this->loadRels($slideRels);
                         $this->loadSlide($pptSlide, basename($pathSlide));
-                        foreach ($this->arrayRels[$slideRels] as $rel)
-                        {
-                            if ('http://schemas.openxmlformats.org/officeDocument/2006/relationships/notesSlide' == $rel['Type'])
-                            {
+                        foreach ($this->arrayRels[$slideRels] as $rel) {
+                            if ('http://schemas.openxmlformats.org/officeDocument/2006/relationships/notesSlide' == $rel['Type']) {
                                 $this->loadSlideNote(basename($rel['Target']), $this->oPhpPresentation->getActiveSlide());
                             }
                         }
