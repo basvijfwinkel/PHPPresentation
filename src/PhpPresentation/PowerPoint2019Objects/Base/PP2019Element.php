@@ -272,18 +272,25 @@ class PP2019Element extends ParseHelper
     {
         $allAttributes = $this->getAllAttributes($element, $this->namespacedElementName);
 
-        foreach($this->knownAttributes as $attrName => $attrDef)
+        foreach($allAttributes as $attrName => $attrProps)
         {
-            if (isset($allAttributes[$attrDef['namespacedName']]))
+            foreach($this->knownAttributes as $knownAttrName => $knownAttrDef)
             {
-                // set the attribute value
-// TODO : validate the attribute ?
-                $this->attributes[$attrName] = $allAttributes[$attrDef['namespacedName']];
+                if ($attrName == $knownAttrName)
+                {
+                    // found a known attribute
+                    $this->attributes[$attrName] = $attrProps;//$allAttributes[$knownAttrDef['namespacedName']];
+                }
             }
-            else
+        }
+
+        // set missing attributes to null
+        foreach($this->knownAttributes as $knownAttrName => $knownAttrDef)
+        {
+            if (!isset($allAttributes[$knownAttrDef['namespacedName']]))
             {
                 // attribute was not present : set to null
-                $this->attributes[$attrName] = null;
+                $this->attributes[$knownAttrName] = null;
             }
         }
 
@@ -296,13 +303,14 @@ class PP2019Element extends ParseHelper
         $allChildNodes = $this->getAllChildNodes($element, $this->namespacedElementName);
 
         // collect all known childNodes
-        foreach($this->knownChildNodes as $childNodeName => $childNodeDef)
+        foreach($allChildNodes as $allChildNode)
         {
-            foreach($allChildNodes as $childNode)
+            foreach($this->knownChildNodes as $knownChildNodeName => $knownChildNodeDef)
             {
-                if ($childNode['name'] == $childNodeDef['namespacedName'])
+                if ($allChildNode['name'] == $knownChildNodeDef['namespacedName'])
                 {
-                    $classname = $childNodeDef['type'];
+                    // found a known child node
+                    $classname = $knownChildNodeDef['type'];
                     $namespacedClassname = $this->namespacedClassnames[$classname]??null;
                     if (is_null($namespacedClassname))
                     {
@@ -310,7 +318,7 @@ class PP2019Element extends ParseHelper
                     }
 
                     $obj = new $namespacedClassname;
-                    $childParsingErrors = $obj->loadFromDomElement($childNode['data']);
+                    $childParsingErrors = $obj->loadFromDomElement($allChildNode['data']);
 
                      // see if we got some parsing error in the childNode
                     if ($childParsingErrors)
@@ -322,16 +330,28 @@ class PP2019Element extends ParseHelper
                     else
                     {
                         // no parsing errors
-                        $this->childNodes[] = ['name' => $childNodeName, 'data' => $obj];
+                        $this->childNodes[] = ['name' => $knownChildNodeName, 'data' => $obj];
                     }
-                }
-                else
-                {
-                    //not present
-                    $this->childNodes[] = ['name' => $childNodeName, 'data' => null];
                 }
             }
         }
+
+        // set missing childNodes to null
+        foreach($this->knownChildNodes as $knownChildNodeName => $knownChildNodeDef)
+        {
+            foreach($allChildNodes as $allChildNode)
+            {
+
+                if ($allChildNode['name'] == $knownChildNodeDef['namespacedName'])
+                {
+                    // found a known child node
+                    continue 2;
+                }
+            }
+            // if we end up here : the knownChildNode is missing in the data
+            $this->childNodes[] = ['name' => $knownChildNodeName, 'data' => null];
+        }
+
 
         // also report if we missed some ChildNode we are supposed to have processed
         $this->reportUnknownChildNodes($this->knownChildNodes, array_unique(array_column($allChildNodes,'name')));
@@ -354,15 +374,15 @@ class PP2019Element extends ParseHelper
             }
 
             // getter for a known childNode?
-            foreach(array_keys($this->knownChildNodes) as $nodeName)
+            foreach(array_keys($this->knownChildNodes) as $knownChildNodeName)
             {
-                if ($nodeName == $name)
+                if ($knownChildNodeName == $name)
                 {
                     // this is a known childNode : return the object(s) or null
                     $returnresults = [];
                     foreach($this->childNodes as $childNode)
                     {
-                        if ($childNode['name'] == $nodeName)
+                        if ($childNode['name'] == $knownChildNodeName)
                         {
                             $returnresults[] = $childNode['data'];
                         }
