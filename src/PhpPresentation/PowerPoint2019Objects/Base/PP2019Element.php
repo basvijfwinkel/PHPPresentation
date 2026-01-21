@@ -28,6 +28,7 @@ namespace PhpOffice\PhpPresentation\PowerPoint2019Objects\Base;;
 
 use Exception;
 use DomElement;
+use DomDocument; // for debugging
 use BadMethodCallException;
 
 use PhpOffice\Common\XMLReader;
@@ -165,10 +166,10 @@ class PP2019Element extends ParseHelper
     {
         // =========== prepare the namespaced names
 
-        // namespaced elementName
+        // prepare namespaced elementName
         $this->namespacedElementName = (is_null($this->elementNamespace)?'':($this->elementNamespace.':')).$this->elementName;
 
-        // attributes namespaced names
+        // prepare attributes namespaced names
         foreach($this->knownAttributes as $attrName => $attrDef)
         {
             if (!is_null($attrDef['ns']??null))
@@ -183,7 +184,7 @@ class PP2019Element extends ParseHelper
             }
         }
 
-        // childNodes namespace names
+        // prepare childNodes namespace names
         foreach($this->knownChildNodes as $childNodeName => $childNodeDef)
         {
             if (!is_null($childNodeDef['ns']??null))
@@ -225,7 +226,7 @@ class PP2019Element extends ParseHelper
                 $this->parseChildNodes($element);
 
                 // get namespaces
-                $this->parseNameSpaces($xmlstring);
+                $this->parseNameSpaces($element);
             }
             else
             {
@@ -245,7 +246,7 @@ class PP2019Element extends ParseHelper
         $this->parseChildNodes($element);
 
         // get namespaces
-//        $this->parseNameSpaces($xmlstring);
+        $this->parseNameSpaces($element);
 
         return $this->hasParsingErrors;
     }
@@ -261,9 +262,9 @@ class PP2019Element extends ParseHelper
     }
 
     // get all namespaces
-    protected function parseNameSpaces(string $xmlstring): void
+    protected function parseNameSpaces(DomElement $element): void
     {
-        $this->namespaces = $this->extractNamespaces($xmlstring);
+        $this->namespaces = $this->extractNamespaces($element);
     }
 
     // get all attributes for the specified element
@@ -293,41 +294,47 @@ class PP2019Element extends ParseHelper
     protected function parseChildNodes(DOMElement $element): void
     {
         $allChildNodes = $this->getAllChildNodes($element, $this->namespacedElementName);
-//$this->e($allChildNodes);
+
         // collect all known childNodes
         foreach($this->knownChildNodes as $childNodeName => $childNodeDef)
         {
-//$this->e($childNodeDef);exit;
-            if (isset($allChildNodes[$childNodeDef['namespacedName']]))
+            foreach($allChildNodes as $childNode)
             {
-// TODO : somehow get a list for namespaces for all classes
-
-                $classname = $childNodeDef['type'];
-                $namespacedClassname = $this->namespacedClassnames[$classname]??null;
-                if (is_null($namespacedClassname))
+                if ($childNode['name'] == $childNodeDef['namespacedName'])
                 {
-                    throw new Exception("Add '".$classname."' namespace to namespaceClassname array in PP2019Element. Called from ".$element->tagName."    ");
-                }
+                    $classname = $childNodeDef['type'];
+                    $namespacedClassname = $this->namespacedClassnames[$classname]??null;
+                    if (is_null($namespacedClassname))
+                    {
+                        throw new Exception("Add '".$classname."' namespace to namespaceClassname array in PP2019Element. Called from ".$element->tagName."    ");
+                    }
 
-                $this->childNodes[$childNodeName] = new $namespacedClassname;
-                $childParsingErrors = $this->childNodes[$childNodeName]->loadFromDomElement($allChildNodes[$childNodeDef['namespacedName']]);
-                // see if we got some parsing error in the childNode
-                if ($childParsingErrors)
-                {
-                    $this->hasParsingErrors = true;
-                    // get the parsing errors from the childNode
-                    $this->debugParseErrorChildNodes[] = $this->childNodes[$childNodeName]->getParsingErrors();
+                    $obj = new $namespacedClassname;
+                    $childParsingErrors = $obj->loadFromDomElement($childNode['data']);
+
+                     // see if we got some parsing error in the childNode
+                    if ($childParsingErrors)
+                    {
+                        $this->hasParsingErrors = true;
+                        // get the parsing errors from the childNode
+                        $this->debugParseErrorChildNodes[] = $obj->getParsingErrors();
+                    }
+                    else
+                    {
+                        // no parsing errors
+                        $this->childNodes[] = ['name' => $childNodeName, 'data' => $obj];
+                    }
                 }
-            }
-            else
-            {
-                //not present
-                $this->childNodes[$childNodeName] = null;
+                else
+                {
+                    //not present
+                    $this->childNodes[] = ['name' => $childNodeName, 'data' => null];
+                }
             }
         }
 
-        // also report if we missed some ChildNode
-        $this->reportUnknownChildNodes($this->knownChildNodes, array_keys($allChildNodes));
+        // also report if we missed some ChildNode we are supposed to have processed
+        $this->reportUnknownChildNodes($this->knownChildNodes, array_unique(array_column($allChildNodes,'name')));
     }
 
     public function __call(string $methodName , array $methodArguments ) : mixed
@@ -351,8 +358,30 @@ class PP2019Element extends ParseHelper
             {
                 if ($nodeName == $name)
                 {
-                    // this is a known childNode : return the object or null
-                    return ($this->childNodes[$nodeName]??null);
+                    // this is a known childNode : return the object(s) or null
+                    $returnresults = [];
+                    foreach($this->childNodes as $childNode)
+                    {
+                        if ($childNode['name'] == $nodeName)
+                        {
+                            $returnresults[] = $childNode['data'];
+                        }
+                    }
+                    if (count($returnresults) == 0)
+                    {
+                        // no match
+                        return null;
+                    }
+                    elseif (count($returnresults) == 1)
+                    {
+                        // single results
+                        return $returnresults[0];
+                    }
+                    else
+                    {
+                        // multiple objects
+                        return $returnresults;
+                    }
                 }
             }
 
@@ -380,7 +409,7 @@ class PP2019Element extends ParseHelper
                     {
                         // this is a known childNode : set it if input is valid
                         $this->validateChildNodeObject($nodeName, $methodName, $methodArguments[0]);
-                        $this->childNodes[$nodeName] = $methodArguments[0];
+                        $this->childNodes[] = ['name' => $nodeName, 'data' => $methodArguments[0]];
                     }
                 }
             }
@@ -455,7 +484,6 @@ class PP2019Element extends ParseHelper
     {
         // start element
         $objWriter->startElement($this->namespacedElementName);
-
         // do we have namespaces?
         if ($this->namespaces != [])
         {
@@ -480,8 +508,8 @@ class PP2019Element extends ParseHelper
         {
             foreach($this->childNodes as $childNode)
             {
-                if (is_null($childNode)) { continue; }
-                $childNode->writeToXML($objWriter);
+                if (is_null($childNode['data'])) { continue; }
+                $childNode['data']->writeToXML($objWriter);
             }
         }
 

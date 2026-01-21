@@ -37,7 +37,7 @@ class SchemeClr extends PP2019Element
     protected $childNodeDefaultNamespace = 'a';
     protected $knownChildNodes  = [
                                    'shade'  => ['type' => 'Shade' ],
-                                   'lumMod' => ['type' => 'LuMod' ],
+                                   'lumMod' => ['type' => 'LumMod' ],
                                    'satMod' => ['type' => 'SatMod'],
                                    'tint'   => ['type' => 'Tint'  ],
 

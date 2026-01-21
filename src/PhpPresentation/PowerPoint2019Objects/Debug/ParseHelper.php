@@ -91,13 +91,41 @@ class ParseHelper extends DebugBase
     }
 
     // get all namespaces used in the xml document
-    public function extractNamespaces(string $xmlstring): array
+    public function extractNamespacesAll(string $xmlstring): array
     {
        // use simplexml because it can get all namespaces directly
        // TODO : only extract the namespaces for the element because there might be child defined namespaces
        $xmldocument = simplexml_load_string(ltrim($xmlstring));
        $namespaces = $xmldocument->getDocNamespaces(true);
        return $namespaces;
+    }
+
+    // get namespaces defined in the element
+    // DomElement can't seem to provide the namespaces through the attributes
+    public function extractNamespaces(DOMElement $element): array
+    {
+        $namespaces = [];
+
+        // Get the XML string of just this element
+        $xml = $element->ownerDocument->saveXML($element);
+
+        // Extract the opening tag
+        if (preg_match('/<[^>]+>/', $xml, $matches))
+        {
+            $openingTag = $matches[0];
+
+            // Find all xmlns declarations
+            preg_match_all('/xmlns:?([a-zA-Z0-9]*)\s*=\s*["\']([^"\']+)["\']/', $openingTag, $nsMatches, PREG_SET_ORDER);
+
+            foreach ($nsMatches as $match)
+            {
+                $prefix = $match[1] ?: 'default'; // Empty prefix means default namespace
+                $uri = $match[2];
+                $namespaces[$prefix] = $uri;
+            }
+        }
+
+        return $namespaces;
     }
 
     public function setOwnParsingError(string $error)
@@ -173,7 +201,7 @@ class ParseHelper extends DebugBase
 
         foreach ($element->childNodes as $childNode)
         {
-            $childNodes[$childNode->nodeName] = $childNode;
+            $childNodes[] = ['name' => $childNode->nodeName, 'data' => $childNode];
         }
         return $childNodes;
     }
